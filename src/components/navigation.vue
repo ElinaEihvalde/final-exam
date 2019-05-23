@@ -38,6 +38,7 @@ export default {
         {title: 'Visit us', link:''},
         {title: 'News', link:''},
         {title: 'Space', link: ''}
+        {title: 'HENLO', link: ''}
     ]
     }
   }
