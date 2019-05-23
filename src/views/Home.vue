@@ -2,16 +2,15 @@
 <v-content>
   <div class="home">
     <div class="banner-txt">
-      <h1><span class="color">Lorem ipsum </span> dolor sit amet consectetur adipisicing elit. Dolore, rem!</h1>
-      <div class="line"></div>
-      <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam amet quas placeat eligendi mollitia!</h5>
+      <h1>Liezeltini Observatory</h1>
+      
+      <h3>STARGAZING EXPERIENCE</h3>
     </div>
     <img class="observatory" src="../assets/obesrvatorija.png" 
     >
     
   </div>
-  <div class="body">
-  </div>
+ 
 </v-content>
 </template>
 

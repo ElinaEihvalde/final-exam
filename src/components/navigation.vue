@@ -10,9 +10,13 @@
    
     <v-toolbar-items class="hidden-sm-and-down nav-links ">
         
-      <v-btn  flat class="text-none font-weight-light custom-btn">Observatory</v-btn>
-      <v-btn flat class="text-none font-weight-light custom-btn" >News</v-btn>
-      <v-btn  flat class="text-none font-weight-light custom-btn">Exploration</v-btn>
+      <v-btn  flat class="text-none font-weight-light custom-btn"
+       v-for="link in links" 
+        :key="link.title" 
+        :to="link.link">
+      {{ link.title }}
+      </v-btn>
+      
       
     </v-toolbar-items>
  <v-spacer></v-spacer>
@@ -30,7 +34,11 @@ export default {
   
   data () {
     return {
-      //
+      links: [
+        {title: 'Visit us', link:''},
+        {title: 'News', link:''},
+        {title: 'Space', link: ''}
+    ]
     }
   }
 }
@@ -72,7 +80,7 @@ export default {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: rgb(168, 39, 50)
+    background-color: #E2BA36
  /* #0FCF9B */;
     transform-origin: bottom right;
     transition: transform 0.4s ease-in;
