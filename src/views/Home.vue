@@ -1,17 +1,18 @@
 <template>
-<v-content class="bckgr">
+<v-content  class="bckgr">
     <div class="home">
         
         <div class="banner-txt">
-            <h1>SEE THE WORLD
-FROM ABOVE</h1>
-
+            <h1 class="display-4">Lielzeltinu Observatory</h1>
             <h3>STARGAZING EXPERIENCE </h3>
         </div>
 
     </div>
-<section class="content">
+   
+<section  class="content">
+    <v-container  mt-3>
     <mainText ></mainText>
+    </v-container>
 </section>
 </v-content>
 </template>
@@ -38,11 +39,13 @@ export default {
 }
 
 .banner-txt {
+    width: 60%;
     z-index: 10;
     position: relative;
     color: #fff;
-    text-align: center;
-    top: 250px;
+    text-align: left;
+    top: 200px;
+    left: 66px;
     animation-name: fadeIn;
     animation-duration: 3s;
 }
@@ -63,7 +66,7 @@ export default {
 }
 
 .banner-txt h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 300;
     color: #E2BA36;
 }
@@ -75,19 +78,6 @@ export default {
     z-index: 11;
 }
 
-.observatory {
-    position: fixed;
-    width: 90%;
-    height: 100%;
-    z-index: 10;
-    right: 0;
-    bottom: 0;
-    top: 50px;
-    opacity: 0.8;
-}
+.content{ width: 60%; margin: auto; }
 
-template {
-    background-color: #1f1f66;
-  
-}
 </style>

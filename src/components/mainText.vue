@@ -1,14 +1,18 @@
 <template>
-<v-content>
-<div v-for="text in texts" :key="text.id" class="centered-text">
-    <h3>{{text.title}}</h3>
-    <p>{{text.content}}</p>
+<v-container>
+    <div class="centered-text" v-for="text in texts" :key="text.id">
 
-</div>
-</v-content>
+        <h3>{{text.title}}</h3>
+        <p>{{text.content}}</p>
+
+        <div v-bind:is="text.comp"></div>
+    </div>
+</v-container>
 </template>
 
 <script>
+import imgNav from './imgNav'
+
 export default {
 
     data() {
@@ -17,6 +21,7 @@ export default {
                     id: 1,
                     title: 'EXPLORE WITH US',
                     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
+                    comp: imgNav
                 },
                 {
                     id: 2,
@@ -35,11 +40,11 @@ export default {
 </script>
 
 <style>
-.centered-text{
+.centered-text {
     text-align: center;
-    width: 50%;
+   
     margin: auto;
-     font-weight: 300;
+    font-weight: 300;
 }
 
 .centered-text h3 {
