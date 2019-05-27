@@ -3,20 +3,21 @@
 
     <v-toolbar-title class="logo">LIELZELTIŅI</v-toolbar-title>
 
+    <v-spacer></v-spacer>
+
     <v-toolbar-items class="hidden-sm-and-down nav-links ">
 
         <v-btn flat class="text-none font-weight-light custom-btn" v-for="link in links" :key="link.title" :to="link.link">
             {{ link.title }}
         </v-btn>
+<v-divider vertical> </v-divider>
+    
 
-    </v-toolbar-items>
-    <v-spacer></v-spacer>
-
-    <v-toolbar-items>
         <v-btn flat>LV</v-btn>
         <v-btn flat>ENG</v-btn>
     </v-toolbar-items>
 </v-toolbar>
+ 
 </template>
 
 <script>
@@ -60,7 +61,8 @@ export default {
 
 .nav-bar {
     animation-name: slideIn;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
+    border-bottom: 0.5px rgba(255, 255, 255, 0.2) solid!important;
 }
 
 @keyframes slideIn {

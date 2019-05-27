@@ -1,17 +1,19 @@
 <template>
-<v-container>
-    <div class="centered-text" v-for="text in texts" :key="text.id">
-
-        <h3>{{text.title}}</h3>
-        <p>{{text.content}}</p>
-
+<v-container fluid pa-0>
+    <v-layout align-center justify-center row wrap class="centered-text"  v-for="text in texts" :key="text.id">
+        <v-flex  xs7>
+            <h3 class="display-2">{{text.title}}</h3>
+            <p>{{text.content}}</p>
+        </v-flex>
         <div v-bind:is="text.comp"></div>
-    </div>
+    </v-layout>
 </v-container>
 </template>
 
 <script>
 import imgNav from './imgNav'
+
+import fullImg from './full-width-seperator'
 
 export default {
 
@@ -21,12 +23,12 @@ export default {
                     id: 1,
                     title: 'EXPLORE WITH US',
                     content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
-                    comp: imgNav
+                    comp: imgNav,
+                   
                 },
                 {
                     id: 2,
-                    title: 'SOMETHING NEW',
-                    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
+                    comp: fullImg
                 },
                 {
                     id: 3,
@@ -42,8 +44,6 @@ export default {
 <style>
 .centered-text {
     text-align: center;
-   
-    margin: auto;
     font-weight: 300;
 }
 
