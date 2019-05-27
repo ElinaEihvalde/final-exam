@@ -4,12 +4,12 @@
       <v-flex sm3 md3 lg2>
           <img class="none" src="../assets/logo.png">
       </v-flex>
-      <v-flex xs6sm3 md3 lg2>
+      <v-flex xs6 sm3 md3 lg2>
           <strong><p>Contact info:</p></strong>
           <p>Phone: 20191238</p>
           <p>E-mail: hello@gmail.com</p>
       </v-flex>
-      <v-flex xs6sm3 md3 lg2>
+      <v-flex xs6 sm3 md3 lg2>
           <strong><p>Adress:</p></strong>
           <p>123 Cool street</p>
           <p>Riga, Latvia</p>

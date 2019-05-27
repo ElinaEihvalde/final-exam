@@ -14,7 +14,7 @@
 
         <v-layout  fill-height absolute  justify-center align-end >
         <v-btn absolute  dark flat @click="$vuetify.goTo('#first-section', { offset: 0,  easing: 'easeInOutCubic', duration:800})">
-            <v-icon light> arrow_upward</v-icon> 
+            <v-icon light> arrow_downward</v-icon> 
         </v-btn>
         
         </v-layout>

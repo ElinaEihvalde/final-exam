@@ -1,7 +1,7 @@
 <template>
 <v-container fluid pa-0>
     <v-layout align-center justify-center row wrap class="centered-text"  v-for="text in texts" :key="text.id">
-        <v-flex  xs7>
+        <v-flex  xs6>
             <h3 class="display-2">{{text.title}}</h3>
             <p>{{text.content}}</p>
         </v-flex>
