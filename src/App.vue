@@ -5,15 +5,18 @@
 
         <router-view></router-view>
     </v-content>
+    <foot />
 </v-app>
 </template>
 
 <script>
-import navigation from '@/components/navigation'
+import navigation from '@/components/navigation';
+import foot from '@/components/footer';
 
 export default {
     components: {
-        navigation
+        navigation,
+        foot
     },
 
     data() {
