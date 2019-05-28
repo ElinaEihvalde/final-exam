@@ -62,7 +62,7 @@ export default {
 .nav-bar {
     animation-name: slideIn;
     animation-duration: 1.8s;
-    border-bottom: 0.5px rgba(255, 255, 255, 0.2) solid!important;
+    border-bottom: 0.5px #dbdbdb83 solid!important;
 }
 
 @keyframes slideIn {
@@ -89,7 +89,7 @@ export default {
 }
 
 .custom-btn::before {
-    color: pink;
+   
     width: unset !important;
 }
 
