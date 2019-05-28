@@ -24,7 +24,7 @@
 
     </div>
 
-    <v-layout dar align-center mt-5 id="first-section">
+    <v-layout dar align-center pt-0 id="first-section">
         <!-- <mainText></mainText> -->
         <homeText></homeText>
     </v-layout>
@@ -47,32 +47,23 @@ export default {
 </script>
 
 <style>
-* {
-    color: #000 !important;
-}
 
 .bckgr {
     background-color: #dbdbdb;
 } 
 .home {
-    background-image: url('../assets/home-backgr7.png') ; 
+    background-image: url('../assets/observatory.jpg') ; 
 }
 
 #first-section {
-    background-color: #f4f4f4;
-    background-image: url('../assets/section1.png');
-   
+    background-color: #dbdbdb;
 }
 
 .home {
     height: 100vh;
-
-    transform: scale(1.05);
-    background-size: contain;
+    background-size: cover;
     background-position: bottom right;
-
     overflow: hidden;
-
 }
 
 .vidCont {
@@ -113,7 +104,7 @@ export default {
 .banner-txt h1 {
     font-size: 5vw;
     line-height: 1.3;
-    padding-bottom: 2vw;
+    padding-bottom: 1vw;
 }
 
 .banner-txt h3 {

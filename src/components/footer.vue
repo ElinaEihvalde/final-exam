@@ -1,7 +1,7 @@
 <template>
 <v-footer  height="auto" class="footer">
     <v-container fluid grid-list-xl>
-        <v-layout align-start justify-space-around row wrap>
+        <v-layout align-start justify-space-around row wrap pt-3>
             <v-flex sm3 md3 lg2>
                 <img class="none" src="../assets/logo.png">
             </v-flex>
@@ -21,7 +21,7 @@
                     <p>Saturday-sunday: 11:00-22:00</p>
                 </v-flex>
                 
-                <v-flex pt-5 xs12>
+                <v-flex pt-0 xs12>
 <v-divider dark></v-divider>
                     <p class="copyright">&copy;2019 — Copyright</p>
                 </v-flex>
@@ -40,14 +40,12 @@ export default {
 
 <style>
 .footer {
-
     background-color: #161616 !important;
     color: #bebebe!important;
-
 }
 
 img {
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .copyright {

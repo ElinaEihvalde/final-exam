@@ -1,6 +1,6 @@
 <template>
    <v-container fluid >
-       <v-layout r\\ v-for="image in images" :key="image.id">
+       <v-layout  v-for="image in images" :key="image.id">
           <v-card >
                <v-img :src="image.img"> </v-img>
           </v-card >
