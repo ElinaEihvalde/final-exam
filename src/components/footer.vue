@@ -40,7 +40,7 @@ export default {
 
 <style>
 .footer {
-    background-color: #161616 !important;
+    background-color: #000 !important;
     color: #bebebe!important;
 }
 

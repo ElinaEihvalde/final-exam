@@ -13,21 +13,21 @@
     </div>
 
     <v-layout dar align-center pt-0 id="first-section">
-        <mainText></mainText>
-        <!-- <homeText></homeText> -->
+        <!-- <mainText></mainText> -->
+        <homeText></homeText>
     </v-layout>
 
 </v-container>
 </template>
 
 <script>
-import mainText from '../components/mainText'
-/* import homeText from '../components/home-text' */
+/* import mainText from '../components/mainText'  */
+import homeText from '../components/home-text'
 
 export default {
     components: {
-         mainText
-       /*  homeText */
+         /* mainText */
+       homeText
 
     },
 
@@ -105,7 +105,7 @@ export default {
 
 .line {
     width: 30%;
-     border-bottom: 2.5px solid rgb(122, 28, 15);
+     border-bottom: 2.5px solid #ffa000;
    /*  border-bottom: 2.5px solid rgb(218, 152, 12); */
 
 }
