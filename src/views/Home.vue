@@ -1,45 +1,33 @@
 <template>
 <v-container fluid pa-0 class="bckgr">
     <div align-center class="home">
-
-        <!-- <span class="vidCont">
-            <video autoplay muted loop id="myVideo" >
-  <source src="../assets/Space.mp4" type="video/mp4">
-</video>
- </span> -->
         <v-flex lg6 pl-5 class="banner-txt text-xs-left">
             <h1 class="display-4">Your Gateway To The Universe</h1>
             <div class="line"> </div>
-            <h3>STARGAZING EXPERIENCE WITH LIELZELTINU OBSERVATORY WILL BRING YOU TO MOON AND BACK</h3>
+            <h3>STARGAZING EXPERIENCE WITH LIELZELTINU OBSERVATORY WILL BRING YOU Closer to stars</h3>
             <v-btn class="custom-btn" ripple flat right pa-0 dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
             </v-btn>
         </v-flex>
 
-        <!--   <v-layout  fill-height absolute  justify-center align-end >
-        <v-btn absolute  dark flat @click="$vuetify.goTo('#first-section', { offset: 0,  easing: 'easeInOutCubic', duration:800})">
-            <v-icon light> arrow_downward</v-icon> 
-        </v-btn>
-
-        </v-layout> -->
 
     </div>
 
     <v-layout dar align-center pt-0 id="first-section">
-        <!-- <mainText></mainText> -->
-        <homeText></homeText>
+        <mainText></mainText>
+        <!-- <homeText></homeText> -->
     </v-layout>
 
 </v-container>
 </template>
 
 <script>
-/* import mainText from '../components/mainText' */
-import homeText from '../components/home-text'
+import mainText from '../components/mainText'
+/* import homeText from '../components/home-text' */
 
 export default {
     components: {
-        /*  mainText */
-        homeText
+         mainText
+       /*  homeText */
 
     },
 
@@ -56,7 +44,7 @@ export default {
 }
 
 #first-section {
-    background-color: #dbdbdb;
+    background-color: #050505;
 }
 
 .home {
