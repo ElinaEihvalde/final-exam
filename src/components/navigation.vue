@@ -27,7 +27,7 @@ export default {
         return {
             links: [{
                     title: 'Visit us',
-                    link: ''
+                    link: '/visit-us'
                 },
                 {
                     title: 'News',
@@ -101,7 +101,7 @@ export default {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #E2BA36
+    background-color: #ffa000
         /* #0FCF9B */
     ;
     transform-origin: bottom right;
