@@ -1,8 +1,10 @@
 <template>
 
-<v-container class="height">
+<v-container fluid>
+    
     <blogTitle/>
     <blogPosts/>
+   
 </v-container>
     
 </template>
