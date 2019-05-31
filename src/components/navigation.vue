@@ -1,5 +1,5 @@
 <template>
-<v-toolbar class="nav-bar" dark absolute color="rgba(0,0,0,0)" flat>
+<v-toolbar class="nav-bar" absolute color="rgba(0,0,0,0)" flat>
 
     <v-toolbar-title class="logo">LIELZELTIŅI</v-toolbar-title>
 
@@ -31,7 +31,7 @@ export default {
                 },
                 {
                     title: 'News',
-                    link: ''
+                    link: '/blog'
                 },
                 {
                     title: 'Space',

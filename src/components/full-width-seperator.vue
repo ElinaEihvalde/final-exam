@@ -1,8 +1,7 @@
 <template>
-    <v-container fluid px-0> 
-        <v-img  height="350" :src="require('@/assets/home-backgr.jpg')">
+    <v-container class="background-color" fluid pa-0> 
+        
         <quote></quote>
-         </v-img>
     </v-container>
 </template>
 
@@ -14,3 +13,11 @@ export default {
     }
 }
 </script>
+
+<style>
+.background-color {
+    background-color: #F7F4F1!important;
+    height: 30vh;
+}
+</style>
+
