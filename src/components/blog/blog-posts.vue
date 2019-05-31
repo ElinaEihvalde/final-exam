@@ -16,8 +16,8 @@
                         <h4 class="headline">{{post.title}}</h4>
 
                         <p>{{post.description}}</p>
-                          <v-chip disabled small  text-color="#131723">Label</v-chip>
-                        <v-chip disabled small  text-color="#131723">Label</v-chip>
+                          <v-chip type="array" disabled small  text-color="#131723">{{post.chips}}</v-chip>
+                        <v-chip disabled small  text-color="#131723">Photos</v-chip>
                         <v-chip disabled small  text-color="#131723">Label</v-chip>
                     </div>
                 </v-card-title>
@@ -41,7 +41,7 @@ export default {
                     date: '23.05.2019',
                     title: 'Moon observation',
                     description: 'Our observatory has like telescope and stuff. We also have a comfy guesthouse where you can chill after watching stars lol. Our program consists of stuff.',
-                    class: 'offset-xs1'
+                    chips: ['astronomy', 'moon','photos']
 
                 },
                 {
