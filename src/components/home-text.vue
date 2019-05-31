@@ -10,7 +10,6 @@
             <div class="line"></div>
             <p class="body-1">{{text.content}}</p>
     </v-flex > 
-
     </v-layout>
 </v-container>
 </template>

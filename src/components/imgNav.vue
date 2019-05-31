@@ -1,7 +1,7 @@
 <template>
 <v-container class="container" fluid grid-list-xl pa-2>
      <v-layout align-center justify-center row wrap>
-        <v-flex xs3 v-for="card in cards" :key="card.id" class="card-hover">
+        <v-flex xs2 v-for="card in cards" :key="card.id" class="card-hover">
             <v-card dark>
                 <v-img v-bind:src="card.image" class="white--text" height="45vh" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
                     <v-card-title class="fill-height align-end justify-center  ">
@@ -79,7 +79,6 @@ export default {
     .white--text:hover {
     transform: scale(1.3); 
     transition-duration: .5s;
-    
     }
  */
 </style>
