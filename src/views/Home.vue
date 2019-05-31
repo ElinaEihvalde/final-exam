@@ -9,9 +9,9 @@
             </v-btn>
         </v-flex>
     </div>
-    <v-layout dar align-center pt-0 id="first-section">
+    <v-layout pa-0 align-center pt-0 id="first-section">
         <!-- <mainText></mainText> -->
-        <homeText></homeText>>
+        <homeText></homeText>
     </v-layout>
 <fullWidthSeperator>
 </fullWidthSeperator>
@@ -36,14 +36,12 @@ export default {
 
 <style>
 
-.bckgr {
-    background-color: #dbdbdb;
-} 
+
 .home {
     background-image: url('../assets/observatory.jpg') ; 
 }
 
-#first-section {
+#first-section, .bckgr {
     background-color: #050505;
 }
 
