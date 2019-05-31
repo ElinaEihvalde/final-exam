@@ -14,6 +14,7 @@ $headings = {
   button: { size: 14px, weight: 500 }
 }
 
+
 // Spacing
 // ============================================================
 $spacer := 16px
@@ -51,6 +52,31 @@ $spacers := {
 
 }
 
+// Grid
+// ============================================================
+$grid-breakpoints := {
+  xs: 0
+  sm: 600px
+  md: 960px
+  lg: (1280px - 16px) // Desktop gets a 16dp reduction
+  xl: (1920px - 16px) // https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
+}
 
+$grid-gutter := 8px
+$grid-columns := 12
+$grid-gutters := {
+  xs: ($grid-gutter / 4)
+  sm: ($grid-gutter / 2)
+  md: $grid-gutter
+  lg: ($grid-gutter * 2)
+  xl: ($grid-gutter * 3)
+  xxl: ($grid-gutter * 6)
+}
+
+$container-max-widths := {
+  md: $grid-breakpoints.md
+  lg: $grid-breakpoints.lg
+  xl: $grid-breakpoints.xl
+}
 
 @require '~vuetify/src/stylus/main.styl'
