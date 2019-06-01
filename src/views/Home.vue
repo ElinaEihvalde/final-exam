@@ -9,8 +9,10 @@
             </v-btn>
         </v-flex>
     </div>
+    <!--  <mainText></mainText>  -->
+      
     <v-layout pa-0 align-center pt-0 id="first-section">
-        <!-- <mainText></mainText> -->
+        
         <homeText></homeText>
     </v-layout>
 <fullWidthSeperator>
@@ -20,13 +22,13 @@
 </template>
 
 <script>
-/* import mainText from '../components/mainText'  */
+/* import mainText from '../components/mainText'   */
 import homeText from '../components/home-text'
 import fullWidthSeperator from '../components/full-width-seperator'
 
 export default {
     components: {
-         /* mainText */
+    /*    mainText, */
        homeText,
        fullWidthSeperator
     },

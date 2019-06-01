@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -23,6 +24,21 @@ export default new Router({
       name: 'blog',
       component: () => import('./views/Blog-page.vue')
     },
+
+    {
+      path: '/blog/:id',
+      name: 'post',
+      props: true,
+      component: () => import('./components/blog/single-post.vue')
+    },
+
+    {
+      path: '/create-blog',
+      name: 'crete-blog',
+      component: () => import('./views/create-blog.vue'),
+     
+    },
+
     {
       path: '/about',
       name: 'about',

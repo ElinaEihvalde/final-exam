@@ -1,5 +1,5 @@
 <template>
-<v-toolbar class="nav-bar" absolute color="rgba(0,0,0,0)" flat>
+<v-toolbar dark class="nav-bar" absolute color="#050505" flat>
 
     <v-toolbar-title class="logo">LIELZELTIŅI</v-toolbar-title>
 

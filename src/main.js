@@ -9,6 +9,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './stylus/main.styl'
 
+
 Vue.config.productionTip = false
 
 new Vue({
@@ -23,6 +24,8 @@ new Vue({
     messagingSenderId: "606113283110",
     appId: "1:606113283110:web:b73e9936d6c4464d"
     })
+
+    this.$store.dispatch('loadPosts')
   },
   router,
   store,
