@@ -6,12 +6,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: null
+    user: null,
+    submitedForm: []
   },
 
   mutations: {
     setUser(state, payload) {
       state.user = payload
+    },
+    messages (state, payload) {
+      state.submitedForm.push(payload)
     }
   },
 
@@ -46,8 +50,26 @@ export default new Vuex.Store({
     logout({commit}) {
       firebase.auth().signOut()
       commit('setUser', null)
-    }
-
+    },
+messages ({commit}, payload) {
+  const contactForm = {
+    name: payload.name,
+    phone: payload.phone,
+    email: payload.email,
+    date: payload.date,
+    message: payload.message
+  }
+  firebase.database().ref('messages').push(contactForm)
+  .then((data) => {
+    const key = data.key
+    commit('messages', {
+      ...contactForm,
+      id: key
+    })
+  })
+  .catch((error) => {console.log(error)
+  })
+}
 
   },
 

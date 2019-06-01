@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid pa-0 class="seperator-background" grid-list-xxl>
-    <v-layout align-center justify-center class="seperator" py-5>
+  <v-container fluid pa-0  class="seperator-background" grid-list-xxl>
+    <v-layout align-center justify-center class="seperator" >
       <v-flex xs10>
         <v-layout row data-aos="fade-up" data-aos-duration="1000">
           <v-flex xs4 v-bind:class="info.class" py-5 v-for="info in infos" :key="info.id"  class="info-img">
@@ -55,11 +55,9 @@ export default {
 .seperator {
   background-color: #f7f4f1;
   color: #000 !important;
-  height: 72.5vh;
+  height: 70vh;
 }
-.seperator-background {
-  background-color: #050505;
-}
+.seperator-background {background-color: #050505;}
 
 .info-pic {max-width: 20%;}
 

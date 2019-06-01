@@ -13,9 +13,14 @@
         <!-- <mainText></mainText> -->
         <homeText></homeText>
     </v-layout>
+    <div id="second-section">
 <fullWidthSeperator>
 </fullWidthSeperator>
-<homeText></homeText>
+<v-flex>
+    <blogTitle/>
+    <blogPosts/>
+</v-flex> 
+    </div>
 </v-container>
 </template>
 
@@ -23,15 +28,20 @@
 /* import mainText from '../components/mainText'  */
 import homeText from '../components/home-text'
 import fullWidthSeperator from '../components/full-width-seperator'
+import blogTitle from '../components/blog/blog-title'
+import blogPosts from '../components/blog/blog-posts'
 
 export default {
     components: {
          /* mainText */
        homeText,
-       fullWidthSeperator
+       fullWidthSeperator,
+        blogTitle,
+        blogPosts
     },
 
 }
+
 </script>
 
 <style>
@@ -44,7 +54,7 @@ export default {
 #first-section, .bckgr {
     background-color: #050505;
 }
-
+#second-section {background-color: #f7f4f1;}
 .home {
     height: 100vh;
     background-size: cover;
