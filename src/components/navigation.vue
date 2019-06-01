@@ -1,13 +1,15 @@
 <template>
-<v-toolbar dark class="nav-bar" absolute color="#050505" flat>
+<v-toolbar class="nav-bar" absolute color="#050505" flat>
 
-    <v-toolbar-title class="logo">LIELZELTIŅI</v-toolbar-title>
+    <v-toolbar-title>
+    <router-link to="/" class="logo">LIELZELTIŅI</router-link>
+    </v-toolbar-title>
 
     <v-spacer></v-spacer>
 
     <v-toolbar-items class="hidden-sm-and-down nav-links ">
 
-        <v-btn flat class="text-none font-weight-light custom-btn" v-for="link in links" :key="link.title" :to="link.link">
+        <v-btn color="#ffffff" flat class="text-none font-weight-light custom-btn" v-for="link in links" :key="link.title" :to="link.link">
             {{ link.title }}
         </v-btn>
 <v-divider vertical> </v-divider>
@@ -25,7 +27,8 @@ export default {
 
     data() {
         return {
-            links: [{
+            links: [
+                {
                     title: 'Visit us',
                     link: '/visit-us'
                 },
@@ -56,7 +59,10 @@ export default {
 
 .logo {
     padding-left: 40px;
-    font-size: 1.8vw;
+    font-weight: 600;
+    font-size: 1.4vw;
+    text-decoration: none;
+    color: #fff;
 }
 
 .nav-bar {

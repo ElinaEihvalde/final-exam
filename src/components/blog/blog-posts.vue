@@ -41,8 +41,7 @@ export default {
 
 </script>
 
-
-<style>
+<style scoped>
 .flex.offset-xs1:nth-child(even) {
     margin-left: 0;
 }

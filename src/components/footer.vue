@@ -1,70 +1,72 @@
 <template>
-<v-footer  height="auto" class="footer">
-    <v-container fluid grid-list-xl>
-        <v-layout align-start justify-space-around row wrap pt-3>
-            <v-flex sm3 md3 lg2>
-                <img class="none" src="../assets/logo.png">
-            </v-flex>
-                <v-flex xs6 sm3 md3 lg2>
-                    <strong><p>Contact info:</p></strong>
-                    <p>Phone: 20191238</p>
-                    <p>E-mail: hello@gmail.com</p>
-                </v-flex>
-                <v-flex xs6 sm3 md3 lg2>
-                    <strong><p>Adress:</p></strong>
-                    <p>123 Cool street</p>
-                    <p>Riga, Latvia</p>
-                </v-flex>
-                <v-flex class="none" sm3 md3 lg2>
-                    <strong><p>Opening hours:</p></strong>
-                    <p>Monday-friday: 15:00-22:00</p>
-                    <p>Saturday-sunday: 11:00-22:00</p>
-                </v-flex>
-                
-                <v-flex pt-0 xs12>
-<v-divider dark></v-divider>
-                    <p class="copyright">&copy;2019 — Copyright</p>
-                </v-flex>
-        </v-layout>
+  <v-footer height="auto" class="footer" pt-5 ma-0>
+    <v-container fluid grid-list-xl pb-0 ma-0>
+      <v-layout align-start justify-space-around row wrap pt-3 mb-0>
+        <v-flex sm3 md3 lg2>
+          <img class="none" src="../assets/logo.png">
+        </v-flex>
+        <v-flex xs6 sm3 md3 lg2>
+          <strong>
+            <p>Contact info:</p>
+          </strong>
+          <p>Phone: 29 209 002</p>
+          <p>E-mail: sklimanskis@gmail.com</p>
+        </v-flex>
+        <v-flex xs6 sm3 md3 lg2>
+          <strong>
+            <p>Adress:</p>
+          </strong>
+          <p>Lielzeltiņi, Balgales pagasts</p>
+          <p>Talsu novads, Latvija</p>
+        </v-flex>
+        <v-flex class="none" sm3 md3 lg2>
+          <strong>
+            <p>Opening hours:</p>
+          </strong>
+          <p>Monday-friday: 15:00-22:00</p>
+          <p>Saturday-sunday: 11:00-22:00</p>
+        </v-flex>
+        <v-flex pa-0 xs12>
+          <v-divider dark></v-divider>
+        </v-flex>
+        <v-flex pt-3 xs12 align-center>
+          <p class="copyright">&copy;2019 — Copyright</p>
+        </v-flex>
+      </v-layout>
     </v-container>
-</v-footer>
+  </v-footer>
 </template>
 
 <script>
 export default {
-    components: {
-
-    },
-}
+  components: {}
+};
 </script>
 
 <style>
 .footer {
-    background-color: #000 !important;
-    color: #bebebe!important;
+  background-color: #000 !important;
+  color: #bebebe !important;
 }
 
 img {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .copyright {
-    text-align: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 960px) {
-    .footer {
-        font-size: 1.1em;
-    }
+  .footer {
+    font-size: 1.1em;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .none {
-        display: none;
-    }
+  .none {
+    display: none;
+  }
 
-    .footer {
-        padding-top: 25px;
-    }
 }
 </style>

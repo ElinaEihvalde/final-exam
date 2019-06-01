@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     user: null,
 
-    loadedBlogPosts: []
+    loadedBlogPosts: [],
+    submitedForm: []
   },
 
   mutations: {
@@ -21,6 +22,9 @@ export default new Vuex.Store({
 
     createPost(state, payload) {
       state.loadedBlogPosts.push(payload)
+    },
+    messages (state, payload) {
+      state.submitedForm.push(payload)
     }
 
 
@@ -118,6 +122,25 @@ export default new Vuex.Store({
     },
 
 
+messages ({commit}, payload) {
+  const contactForm = {
+    name: payload.name,
+    phone: payload.phone,
+    email: payload.email,
+    date: payload.date,
+    message: payload.message
+  }
+  firebase.database().ref('messages').push(contactForm)
+  .then((data) => {
+    const key = data.key
+    commit('messages', {
+      ...contactForm,
+      id: key
+    })
+  })
+  .catch((error) => {console.log(error)
+  })
+}
 
   },
 
