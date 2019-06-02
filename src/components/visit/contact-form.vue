@@ -82,7 +82,7 @@
       >
       </v-textarea>
 </v-flex>
-<v-flex xs10 pa-0>
+<v-flex xs12 pa-0>
     <div>
         <v-alert
       v-model="alert"

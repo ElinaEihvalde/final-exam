@@ -9,26 +9,23 @@
             </v-btn>
         </v-flex>
     </div>
+    
     <!--  <mainText></mainText>  -->
-      
-    <v-layout pa-0 align-center pt-0 id="first-section">
-        
-        <homeText></homeText>
-    </v-layout>
-    <div id="second-section">
-<fullWidthSeperator/>
-<v-flex>
-    <homeBlog/>
-   </v-flex> 
+      <v-layout pa-0 align-center pt-0  id="first-section">
+          <home-text/>
+          </v-layout>
 
-   </div>
+    <v-layout pa-0 align-center pt-0 >
+<homeSection/>
+    </v-layout>
+
 </v-container>
 </template>
 
 <script>
 /* import mainText from '../components/mainText'   */
 import homeText from '../components/home-text'
-import fullWidthSeperator from '../components/full-width-seperator'
+import homeSection from '../components/home-section'
 import homeBlog from '../components/home-blog'
 
 
@@ -36,7 +33,7 @@ export default {
     components: {
     /*    mainText, */
        homeText,
-       fullWidthSeperator,
+       homeSection,
         homeBlog
     },
 
