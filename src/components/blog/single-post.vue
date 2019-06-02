@@ -1,5 +1,5 @@
 <template>
-<v-container fluid mt-6 grid-list-xxl >
+<v-container fluid mt-6 grid-list-xxl class="bckr">
     <v-layout row  fixed >
         <v-flex xs4 offset-xs1>
             <v-img :src="post.coverImg" height="80vh" cover> </v-img>
@@ -39,5 +39,6 @@ export default {
     height:65vh;
 }
 
+.bckr {background-color:#f7f4f1;}
 
 </style>

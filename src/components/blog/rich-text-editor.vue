@@ -1,5 +1,5 @@
 <template>
-<v-container fluid mt-5>
+<v-container fluid mt-5 pl-0>
     <v-layout justify-start>
         <v-flex sm8 xs12>
             <form @submit.prevent="onCreatePost">
@@ -15,7 +15,7 @@
                         </v-text-field>
                         <v-text-field v-model="title" placeholder="Blog title" name="title" id="title" color="#ffa000" required>
                         </v-text-field>
-                        <v-textarea v-model="description" placeholder="Short description" name="description" id="description" color="#ffa000" rows="2" auto-grow counter='200' required>
+                        <v-textarea v-model="description" counter="200" placeholder="Short description" name="description" id="description" color="#ffa000" rows="2" auto-grow required>
                         </v-textarea>
                     </v-flex>
 
@@ -133,6 +133,7 @@ export default {
 
     },
     data() {
+        
         return {
             editor: new Editor({
                 extensions: [
@@ -169,7 +170,7 @@ export default {
 
     computed: {
         isValid() {
-            return this.title !== "" && this.description !== "" && this.content !== "" && this.coverImg !== "";
+            return this.title !== "" && this.description !== "" && this.content !== "" && this.coverImg !== "" && this.description.length <= 200;
         }
     },
 
