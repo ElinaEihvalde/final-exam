@@ -1,8 +1,6 @@
 <template>
-<v-container fluid mt-6 pa-0>
-
-    <v-layout pa-0 align-center  id="visit-first-section">
-     
+<v-container fluid pa-0>
+    <v-layout pa-0 align-center pt-0 id="visit-first-section">
         <visitText></visitText>
     </v-layout>
 
@@ -15,8 +13,6 @@
 </template>
 
 <script>
-/* import about from '../components/visit/about-us' */
-
 import visitText from '../components/visit/visit-text'
 import contactForm from '../components/visit/contact-form'
 export default {
