@@ -2,7 +2,7 @@
 <v-container fluid grid-list-xxl>
     <v-layout row wrap>
         <v-flex xs5 offset-xs1 v-for="post in posts" :key="post.id">
-            <v-card flat>
+            <v-card flat class="card-background">
                 <v-img :src="post.coverImg" cover max-height="20vw">
                 
                 </v-img>
@@ -43,4 +43,5 @@ export default {
 .flex.offset-xs1:nth-child(even) {
     margin-left: 0;
 }
+.card-background {background-color: #f7f4f1;}
 </style>

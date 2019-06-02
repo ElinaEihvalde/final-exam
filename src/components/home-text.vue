@@ -2,11 +2,11 @@
 <v-container fluid pa-0>
     
     <v-layout class="home-text" grid-list-xl v-for="text in texts" :key="text.id" align-center pa-0>
-    <v-flex class="image"  xs5 offset-xs1 v-bind:class="text.class" data-aos="fade-up" data-aos-duration="1000">
+    <v-flex class="image"  xs4 offset-xs1 v-bind:class="text.class" data-aos="fade-up" data-aos-duration="1000">
             <v-img  v-bind:src="text.pic">
         </v-img>
     </v-flex>
-    <v-flex xs4 class="offset-xs1" data-aos="fade-up" data-aos-duration="2500">
+    <v-flex xs5 class="offset-xs1" data-aos="fade-up" data-aos-duration="2500">
             <h3 class="display-2">{{text.title}}</h3>
             <div class="line"></div>
             <p class="body-1">{{text.content}}</p>
