@@ -1,5 +1,5 @@
 <template>
-<v-container fluid mt-6 grid-list-xxl>
+<v-container fluid mt-6 grid-list-xxl class="bckr">
      <v-btn absolute left flat small class="custom-btn" @click="$router.go(-1)">
                 <v-icon>keyboard_backspace</v-icon>
                 Back
@@ -43,4 +43,7 @@ export default {
     overflow-y: scroll;
     height: 65vh;
 }
+
+.bckr {background-color:#f7f4f1;}
+
 </style>
