@@ -16,13 +16,12 @@
         <homeText></homeText>
     </v-layout>
     <div id="second-section">
-<fullWidthSeperator>
-</fullWidthSeperator>
+<fullWidthSeperator/>
 <v-flex>
-    <blogTitle/>
-    <blogPosts/>
-</v-flex> 
-    </div>
+    <homeBlog/>
+   </v-flex> 
+
+   </div>
 </v-container>
 </template>
 
@@ -30,16 +29,15 @@
 /* import mainText from '../components/mainText'   */
 import homeText from '../components/home-text'
 import fullWidthSeperator from '../components/full-width-seperator'
-import blogTitle from '../components/blog/blog-title'
-import blogPosts from '../components/blog/blog-posts'
+import homeBlog from '../components/home-blog'
+
 
 export default {
     components: {
     /*    mainText, */
        homeText,
        fullWidthSeperator,
-        blogTitle,
-        blogPosts
+        homeBlog
     },
 
 }

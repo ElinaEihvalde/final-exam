@@ -23,7 +23,7 @@ export default new Vuex.Store({
     createPost(state, payload) {
       state.loadedBlogPosts.push(payload)
     },
-    messages (state, payload) {
+    messages(state, payload) {
       state.submitedForm.push(payload)
     }
 
@@ -69,6 +69,7 @@ export default new Vuex.Store({
     loadPosts({
       commit
     }) {
+      commit ('setLoading',true)
       firebase.database().ref('posts').once('value')
         .then((data) => {
           const posts = []
@@ -85,6 +86,7 @@ export default new Vuex.Store({
             })
           }
           commit('setLoadedPosts', posts)
+          commit ('setLoading',false)
         })
         .catch((error) => {
           console.log(error)
@@ -122,25 +124,28 @@ export default new Vuex.Store({
     },
 
 
-messages ({commit}, payload) {
-  const contactForm = {
-    name: payload.name,
-    phone: payload.phone,
-    email: payload.email,
-    date: payload.date,
-    message: payload.message
-  }
-  firebase.database().ref('messages').push(contactForm)
-  .then((data) => {
-    const key = data.key
-    commit('messages', {
-      ...contactForm,
-      id: key
-    })
-  })
-  .catch((error) => {console.log(error)
-  })
-}
+    messages({
+      commit
+    }, payload) {
+      const contactForm = {
+        name: payload.name,
+        phone: payload.phone,
+        email: payload.email,
+        date: payload.date,
+        message: payload.message
+      }
+      firebase.database().ref('messages').push(contactForm)
+        .then((data) => {
+          const key = data.key
+          commit('messages', {
+            ...contactForm,
+            id: key
+          })
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    }
 
   },
 
@@ -157,6 +162,11 @@ messages ({commit}, payload) {
       return state.loadedBlogPosts.sort((postA, postB) => {
         return new Date(postB.date) - new Date(postA.date)
       })
+    },
+
+    latestPosts(state, getters) {
+      return getters.loadedBlogPosts.slice(0, 2)
+
     },
     // single POST
     loadedPost(state) {

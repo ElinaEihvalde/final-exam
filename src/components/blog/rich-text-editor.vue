@@ -2,7 +2,7 @@
 <v-container fluid mt-5>
     <v-layout justify-start>
         <v-flex sm8 xs12>
-            <form @submit.prevent="onCreatePost">
+            <v-form @submit.prevent="onCreatePost" v-model="valid">
                 <v-layout>
 
                     <v-flex>
@@ -15,7 +15,7 @@
                         </v-text-field>
                         <v-text-field v-model="title" placeholder="Blog title" name="title" id="title" color="#ffa000" required>
                         </v-text-field>
-                        <v-textarea v-model="description" placeholder="Short description" name="description" id="description" color="#ffa000" rows="2" auto-grow counter='200' required>
+                        <v-textarea v-model="description" placeholder="Short description" name="description" id="description" color="#ffa000" rows="2" auto-grow counter='200'  :rules="descriptionRule" required>
                         </v-textarea>
                     </v-flex>
 
@@ -100,7 +100,7 @@
                     </v-flex>
                 </v-layout>
 
-            </form>
+            </v-form>
         </v-flex>
 
     </v-layout>
@@ -159,6 +159,7 @@ export default {
                 },
 
             }),
+             valid: false,
             coverImg: '',
             title: '',
             description: '',
@@ -169,7 +170,7 @@ export default {
 
     computed: {
         isValid() {
-            return this.title !== "" && this.description !== "" && this.content !== "" && this.coverImg !== "";
+            return this.title !== "" && this.description !== "" && this.content !== "" && this.coverImg !== ""  ;
         }
     },
 
