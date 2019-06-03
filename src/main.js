@@ -24,7 +24,11 @@ new Vue({
     messagingSenderId: "606113283110",
     appId: "1:606113283110:web:b73e9936d6c4464d"
     })
-
+    firebase.auth().onAuthStateChanged((user) =>{
+      if (user) {
+        this.$store.dispatch('autoSignIn', user)
+      }
+    })
     this.$store.dispatch('loadPosts')
   },
   router,

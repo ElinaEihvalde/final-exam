@@ -3,7 +3,7 @@
 
     <v-layout pa-0 align-center  id="visit-first-section">
      
-        <visitText></visitText>
+        <visitText/>
     </v-layout>
 
 <v-layout id="visit-second-section" align-center>

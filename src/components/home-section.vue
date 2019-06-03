@@ -2,7 +2,7 @@
   <v-container fluid pa-0 class="seperator-background" grid-list-xxl>
     <v-layout row align-center justify-center class="seperator"  my-0>
       <v-flex xs10>
-        <v-layout class="mb-5" data-aos="fade-up" data-aos-duration="2000">             
+        <v-layout class="mb-4" data-aos="fade-up" data-aos-duration="2000">             
           <v-flex xs6 offset-xs3  align-center justify-center class="text-align">
             <h2 class="display-2 accent-text mb-5">Articles and Program</h2>
             <p class="body">Learn and explore with Lielzeltinu observatory. We offer you variety of information for astronomers and those who are only interested in astronomy.<br>Read about astronomy related news, travels, observations succesess and of course enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
@@ -38,21 +38,21 @@ export default {
                     title: 'OBSERVATORY',
                     content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
                     pic: require('@/assets/telescope.svg'),
-                    link: '/visit-us/#1',
+                    link: '/visit-us/#observatory',
                 },
                 {
                     id: 2,
                     title: 'GUESTHOUSE',
                     content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
                     pic: require('@/assets/house.svg'),
-                    link: '/visit-us/#2',
+                    link: '/visit-us/#guesthouse',
                 },
                {
                     id: 3,
                     title: 'EXPLORATION',
                     content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
                     pic: require('@/assets/solar-system.svg'),
-                    link: '/space',
+                    link: '/visit-us/visit-us-guesthouse',
                 },
             ]
         }

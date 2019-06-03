@@ -9,14 +9,16 @@
 
     <v-toolbar-items class="hidden-sm-and-down nav-links ">
 
-        <v-btn color="#ffffff" flat class="text-none font-weight-light custom-btn" v-for="link in links" :key="link.title" :to="link.link">
+        <v-btn color="#ffffff" flat class="text-none font-weight-light custom-btn" v-for="link in links" :key="link.title" :to="link.link" :class="link.class">
             {{ link.title }}
         </v-btn>
-<v-divider vertical> </v-divider>
-    
-
-        <v-btn flat>LV</v-btn>
-        <v-btn flat>ENG</v-btn>
+        <v-btn
+        v-if="userIsAuthenticated"
+        @click="onLogout"
+        to="/"
+         color="#ffffff" flat class="text-none font-weight-light custom-btn admin-buttons">
+            Log Out
+        </v-btn>
     </v-toolbar-items>
 </v-toolbar>
  
@@ -27,7 +29,12 @@ export default {
 
     data() {
         return {
-            links: [
+
+        }   
+},
+computed: {
+links () {
+    let links = [
                 {
                     title: 'Visit us',
                     link: '/visit-us'
@@ -40,7 +47,37 @@ export default {
                     title: 'Space',
                     link: ''
                 }
-            ]
+    ]
+    if (this.userIsAuthenticated) {
+        links = [
+                            {
+                    title: 'Visit us',
+                    link: '/visit-us'
+                },
+                {
+                    title: 'News',
+                    link: '/blog'
+                },
+                {
+                    title: 'Space',
+                    link: ''
+                },
+                {
+                    title: 'Create Post',
+                    link: '/create-blog',
+                    class: 'admin-buttons'
+                }
+        ]
+    }
+    return links
+},
+userIsAuthenticated () {
+    return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+}
+    },
+    methods: {
+        onLogout () {
+            this.$store.dispatch('logout')
         }
     }
 }
@@ -118,4 +155,8 @@ export default {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+.admin-buttons {
+    color: #ffa000 !important;
+}
+
 </style>

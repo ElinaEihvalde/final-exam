@@ -4,14 +4,14 @@
         <v-flex lg6 pl-5 class="banner-txt text-xs-left">
             <h1 class="display-4">Your Gateway To The Universe</h1>
             <div class="line"> </div>
-            <h3>STARGAZING EXPERIENCE WITH LIELZELTINU OBSERVATORY WILL BRING YOU Closer to stars</h3>
+            <h3>STARGAZING EXPERIENCE WITH LIELZELTINU OBSERVATORY WILL BRING YOU CLOSER TO STARS</h3>
             <v-btn class="custom-btn" ripple flat right pa-0 dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
             </v-btn>
         </v-flex>
     </div>
     
     <!--  <mainText></mainText>  -->
-      <v-layout pa-0 align-center pt-0  id="first-section">
+      <v-layout pa-0 align-center pt-0 id="first-section">
           <home-text/>
           </v-layout>
 

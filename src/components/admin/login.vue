@@ -3,30 +3,58 @@
   <v-container class="form-container">
 
   <form @submit.prevent="onSignin">
-    <v-layout row wrap justify-center>
-      <v-flex  xs10 sm10 md4>
-        <v-flex center>
+    <v-layout row wrap justify-center align-center class="mt-5">
+      <v-flex  xs3 mt-5>
+        <v-flex center mt-5>
+
+
+<!-- 
+      <v-text-field 
+      prepend-icon="account_circle" 
+      v-model="name" 
+      :rules="nameRules" 
+      label="Name" 
+      required 
+      id="name"
+      color="#ffa000"
+      >
+      </v-text-field>
+ -->
             <v-text-field
-              solo
+            :rules="emailRules" 
+              prepend-icon="mail" 
               name="email"
               label="Email"
               id="email"
               v-model="email"
               type="email"
               required
+              color="#ffa000"
             ></v-text-field>
 
             <v-text-field
-              solo
+            :rules="passwordRules" 
+             prepend-icon="lock" 
               name="password"
               label="Password"
               id="password"
               v-model="password"
               type="password"
               required
+              color="#ffa000"
             ></v-text-field>
+                    <v-alert
+      v-model="alert"
+      type="error"
+      dismissible
+    >Email or password is incorrect
+    </v-alert>
             <v-flex center>
-            <v-btn type="submit" block color="#FF6F61" dark class="btn-margin">Log in</v-btn>
+            <v-btn type="submit" 
+            color="success" 
+            :disabled="!valid" 
+            class="mt-3 ml-0">
+              <v-icon left>lock_open</v-icon> Log in</v-btn>
             </v-flex>
           </v-flex>
           </v-flex>
@@ -39,20 +67,31 @@
 <script>
 export default {
   data() {
+    
     return {
+      alert: false,
       email: "",
-      password: ""
+      password: "",
+      emailRules: [
+      v => !!v || 'E-mail is required',
+     v => /.+@.+/.test(v) || 'E-mail must be valid',
+    ],
+      passwordRules: [
+      v => !!v || 'Password is required',
+    ],
     };
   },
   computed: {
     user() {
       return this.$store.getters.user;
-    }
+    },
+         valid() {
+      return this.email !== "" && this.password !== ""; }
   },
   watch: {
     user(value) {
       if (value !== null && value !== undefined) {
-        this.$router.push("/");
+        this.$router.push("/create-blog");
       }
     }
   },
@@ -68,9 +107,6 @@ export default {
 </script>
 
 <style>
-.v-input__slot {border-radius: 7px !important; padding-left: 20px !important;}
-.v-btn {background: ff3d00;}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -96,9 +132,6 @@ input:-webkit-autofill:active {
 <style scoped>
 .form-container {margin-top: 2vh;}
 .logo-container {margin-bottom: 10vh;}
-#logo {max-height: 8vh;}
-.btn-margin {margin-top: 5vh;}
-.body-color {background-color: #F7f7f7;}
 </style>
 
 
