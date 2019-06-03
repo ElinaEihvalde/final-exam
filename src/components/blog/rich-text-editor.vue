@@ -13,7 +13,7 @@
                         </v-layout>
                         <v-text-field v-model="coverImg" placeholder="Upload image" name="coverImg" id="coverImg" color="#ffa000" required>
                         </v-text-field>
-                        <v-text-field v-model="title" placeholder="Blog title" name="title" id="title" color="#ffa000" required>
+                        <v-text-field v-model="title" counter="80" placeholder="Blog title" name="title" id="title" color="#ffa000" required>
                         </v-text-field>
                         <v-textarea v-model="description" counter="200" placeholder="Short description" name="description" id="description" color="#ffa000" rows="2" auto-grow required>
                         </v-textarea>
@@ -171,7 +171,7 @@ export default {
 
     computed: {
         isValid() {
-            return this.title !== "" && this.description !== "" && this.content !== "" && this.coverImg !== "" && this.description.length <= 200;
+            return this.title !== "" && this.description !== "" && this.content !== "" && this.coverImg !== "" && this.description.length <= 200 && this.title.length <= 80;
         }
     },
 

@@ -12,24 +12,24 @@
 </v-container>
 
     <v-layout pa-0 align-center  id="visit-first-section">
-     
         <visitText></visitText>
-        
-    </v-layout>
-    <v-layout>
-       <!--  <v-divider></v-divider> -->
     </v-layout>
     <v-layout>
         <about/>
     </v-layout>
-
-<v-layout id="visit-second-section" class="my-5" align-center>
+    
+<v-layout fluid pa-0>
+<v-flex offset-xs1 xs10>
+<v-divider color="#909090"></v-divider>
+</v-flex>
+</v-layout>
+<v-layout id="visit-second-section" class="my-6" align-center>
     <v-flex xs5 offset-xs1>
 <contactForm/>
     </v-flex>
             <v-flex xs4 offset-xs1>
                 <h2 class="text-xs-center display-1 ">Send Us a Message</h2>
-                <p class="text-xs-center body-1 pt-3">Send us a message to find about the availability of the observatory. We usuallly respond withing 24 hours. We rearely use e-mail for contacting, so it is important you leave your phone number so we can contact with you faster.</p>
+                <p class="text-xs-center body-1 pt-3">Send us a message to find about the availability of the observatory and guesthouse. We usuallly respond withing 24 hours. We rearely use e-mail for contacting, so it is important you leave your phone number so we can contact you faster.</p>
             </v-flex>
 </v-layout>
 </v-container>

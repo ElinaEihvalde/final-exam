@@ -2,7 +2,7 @@
 <v-container fluid pa-0>
     
     <v-layout class="home-text" grid-list-xl v-for="text in texts" :key="text.id" align-center pa-0>
-    <v-flex class="image"  xs4 offset-xs1 v-bind:class="text.class" data-aos="fade-up" data-aos-duration="1000">
+    <v-flex class="image"  xs4 md6 lg4 offset-md1 offset-lg1 v-bind:class="text.class" data-aos="fade-up" data-aos-duration="1000">
             <v-img  v-bind:src="text.pic">
         </v-img>
     </v-flex>
@@ -28,7 +28,7 @@ export default {
             texts: [{
                     id: 1,
                     title: 'EXPLORE WITH US',
-                    content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
+                    content: 'Lielzeltini Observatory is one of the most remarkable places to visit in Latvia. A small astronomical observatory which is close to the capital of Latvia and yet offers infinite views in the night sky, you have never imagined!',
                     pic: require('@/assets/img1.jpg'),
                     class: 'offset-xs1',
                 },
@@ -39,12 +39,6 @@ export default {
                     pic: require('@/assets/img2.jpg'),
                     class: 'order-xs2',
                 },
-               /*  {
-                    id: 3,
-                    title: 'EXPLORE WITH US',
-                    content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
-                    pic: require('@/assets/img1.jpg'),
-                }, */
             ]
         }
     }
