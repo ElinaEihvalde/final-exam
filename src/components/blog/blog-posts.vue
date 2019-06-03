@@ -1,7 +1,12 @@
 <template>
 <v-container fluid grid-list-xxl>
-    <v-layout row wrap>
-        <v-flex xs5 offset-xs1 v-for="post in posts" :key="post.id">
+    <v-layout justify-center>
+        
+        <v-progress-circular size="56" width="5" color="#ffa000" :indeterminate="true" v-if="loading"></v-progress-circular>
+        
+    </v-layout>
+    <v-layout row wrap v-if="!loading">
+        <v-flex xs5 offset-xs1 v-for="post in posts" :key="post.id" >
             <v-card flat  class="card-background">
                 <v-img :src="post.coverImg" cover max-height="20vw">
                 
@@ -9,7 +14,7 @@
                 <v-card-title>
                     <div>
                       
-                        <p class="grey--text">{{post.date}}</p>
+                        <p class="grey--text">{{post.date | date}}</p>
 
                         <h4 class="headline">{{post.title}}</h4>
 
@@ -32,6 +37,10 @@ export default {
     computed: {
     posts() {
         return this.$store.getters.loadedBlogPosts
+    },
+
+    loading() {
+        return this.$store.getters.loading
     }
 },
 

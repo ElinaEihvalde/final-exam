@@ -13,7 +13,7 @@
         <v-flex xs6 align-self-start>
             <h1 class="display-2"> {{post.title}}</h1>
             <div class="line"></div>
-            <p class="grey--text pt-3">{{post.date}}</p>
+            <p class="grey--text pt-3">{{post.date | date}}</p>
             <v-flex pl-0 class="overflow">
                 <span v-html="post.content"> </span>
             </v-flex>

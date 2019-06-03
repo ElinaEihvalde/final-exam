@@ -7,6 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     user: null,
+    loading: false,
 
     loadedBlogPosts: [],
     submitedForm: []
@@ -19,7 +20,9 @@ export default new Vuex.Store({
     setLoadedPosts(state, payload) {
       state.loadedBlogPosts = payload
     },
-
+setLoading(state, payload) {
+  state.loading = payload
+},
     createPost(state, payload) {
       state.loadedBlogPosts.push(payload)
     },
@@ -155,7 +158,9 @@ export default new Vuex.Store({
     user(state) {
       return state.user
     },
-
+loading(state) {
+  return state.loading
+},
     //---------------BLOG----------------------
     // All posts by date
     loadedBlogPosts(state) {

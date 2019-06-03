@@ -8,7 +8,10 @@ import './registerServiceWorker'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './stylus/main.styl'
+import dateFilter from './dateFilter'
 
+
+Vue.filter('date',dateFilter)
 
 Vue.config.productionTip = false
 

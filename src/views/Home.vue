@@ -4,7 +4,7 @@
         <v-flex lg6 pl-5 class="banner-txt text-xs-left">
             <h1 class="display-4">Your Gateway To The Universe</h1>
             <div class="line"> </div>
-            <h3>STARGAZING EXPERIENCE WITH LIELZELTINU OBSERVATORY WILL BRING YOU Closer to stars</h3>
+            <h3>Stargazing experience with Lielzeltiņu observatory will bring you closer to stars</h3>
             <v-btn class="custom-btn btn-size mt-3" ripple flat right  dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
             </v-btn>
         </v-flex>

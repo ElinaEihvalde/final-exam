@@ -1,5 +1,14 @@
 <template>
-<v-container fluid mt-6 pa-0>
+
+    <v-container fluid mt-6>
+    <v-layout justify-center>
+        <v-flex xs8>
+            <h6 class="title  text-xs-center">LEARN ABOUT US</h6>
+            <h2 class="display-2 text-xs-center accent-text pt-2"> Observatory and Guest house</h2>
+            <p class="pt-3 text-xs-center">Learn and expolre with Lielzeltinu observatory. Read about astronomy related news, travels, observations succesess and ofcourse enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+        </v-flex>
+    </v-layout>
+
 
     <v-layout pa-0 align-center  id="visit-first-section">
      
@@ -7,7 +16,7 @@
         
     </v-layout>
     <v-layout>
-        <v-divider></v-divider>
+       <!--  <v-divider></v-divider> -->
     </v-layout>
     <v-layout>
         
@@ -41,4 +50,7 @@ export default {
     background-color: #f7f4f1;
     height: 80vh;
   }
+  .accent-text {
+    color: #FFA000;
+}
 </style>

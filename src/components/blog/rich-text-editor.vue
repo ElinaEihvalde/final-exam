@@ -193,6 +193,7 @@ export default {
                 date: this.date
             }
             this.$store.dispatch("createPost", postData)
+            this.$router.push("/blog")
 
         },
         showImagePrompt(command) {
