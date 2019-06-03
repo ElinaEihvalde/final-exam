@@ -43,8 +43,6 @@ export default new Router({
       component: () => import('./views/create-blog.vue'),
       beforeEnter: authGuard
     },
-
-    
     {
       path: '/admin',
       name: 'admin',
