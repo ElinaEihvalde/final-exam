@@ -1,19 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import authGuard from './authGuard'
 
 
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [{
       path: '/',
       name: 'home',
       component: Home
     },
+
     {
       path: '/visit-us',
       name: 'visit-us',
@@ -31,12 +33,15 @@ export default new Router({
       props: true,
       component: () => import('./components/blog/single-post.vue')
     },
-
+    {
+      path: '/visit-us/:id',
+      name: 'visit-us-guesthouse'
+    },
     {
       path: '/create-blog',
       name: 'crete-blog',
       component: () => import('./views/create-blog.vue'),
-     
+      beforeEnter: authGuard
     },
 
     {
@@ -53,4 +58,5 @@ export default new Router({
       component: () => import('./views/admin.vue')
     },
   ]
+  
 })

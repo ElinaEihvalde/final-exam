@@ -23,8 +23,8 @@
           <strong>
             <p>Opening hours:</p>
           </strong>
-          <p>Monday-friday: 15:00-22:00</p>
-          <p>Saturday-sunday: 11:00-22:00</p>
+          <p>Monday-Friday: 15:00-22:00</p>
+          <p>Saturday-Sunday: 11:00-22:00</p>
         </v-flex>
         <v-flex pa-0 xs12>
           <v-divider dark></v-divider>
