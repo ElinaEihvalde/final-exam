@@ -4,8 +4,8 @@
       <v-flex xs10>
         <v-layout class="mb-4" data-aos="fade-up" data-aos-duration="2000">             
           <v-flex xs6 offset-xs3  align-center justify-center class="text-align">
-            <h2 class="display-2 accent-text mb-5">Articles and Program</h2>
-            <p class="body">Learn and explore with Lielzeltinu observatory. We offer you variety of information for astronomers and those who are only interested in astronomy.<br>Read about astronomy related news, travels, observations succesess and of course enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+            <h2 class="display-2 accent-text mb-5 text-xs-center">Articles and Program</h2>
+            <p class="body text-xs-center">Learn and explore with Lielzeltinu observatory. We offer you variety of information for astronomers and those who are only interested in astronomy.<br>Read about astronomy related news, travels, observations succesess and of course enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
         </v-flex>
         </v-layout>
         <v-divider dark></v-divider>

@@ -1,17 +1,16 @@
 <template>
-    <v-container >
+    <v-container fluid px-0>
         <v-layout justify-center>
             <v-flex xs8>
                 <h2 class="text-xs-center display-1 ">Sergejs Klimanskis</h2>
-                <p class="text-xs-center pt-3">>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex nesciunt tempora unde excepturi ducimus laborum dolorem totam atque, optio natus commodi quia! Alias aperiam, saepe distinctio odio molestias nulla quae harum dolor quia! Consequuntur iste tempore quisquam ipsa quia obcaecati facere, velit fugit dolorem pariatur ad ex delectus iusto optio recusandae maiores sapiente natus modi minus, nihil earum ab. </p>
+                <p class="text-xs-center pt-3">I was born and now live in Latvia, but not in Riga, but about 100 km to the west in the Talsi region. The illumination here is small, according to LPM it is 21.3 - 21.8, if according to Bortlyu it is something between 2 and 3. Astronomy got carried away at school, and started studying astrophotography only in 2017, that is, when I was already 57.</p>
             </v-flex>
         </v-layout>
         <v-layout justify-center  pt-3>
-            <v-flex  xs12 >
-<v-img :src="image"  height="60%" position="top 25x "> </v-img>
+            <v-flex  xs10 class="sergei-pic">
+<v-img :src="image"> </v-img>
             </v-flex>
         </v-layout>
-        
     </v-container>
 </template>
 

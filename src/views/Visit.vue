@@ -19,14 +19,17 @@
        <!--  <v-divider></v-divider> -->
     </v-layout>
     <v-layout>
-        
         <about/>
     </v-layout>
 
-<v-layout id="visit-second-section" align-center>
+<v-layout id="visit-second-section" class="my-5" align-center>
     <v-flex xs5 offset-xs1>
 <contactForm/>
     </v-flex>
+            <v-flex xs4 offset-xs1>
+                <h2 class="text-xs-center display-1 ">Send Us a Message</h2>
+                <p class="text-xs-center body-1 pt-3">Send us a message to find about the availability of the observatory. We usuallly respond withing 24 hours. We rearely use e-mail for contacting, so it is important you leave your phone number so we can contact with you faster.</p>
+            </v-flex>
 </v-layout>
 </v-container>
 </template>
@@ -48,7 +51,6 @@ export default {
 <style>
 #visit-second-section {
     background-color: #f7f4f1;
-    height: 80vh;
   }
   .accent-text {
     color: #FFA000;
