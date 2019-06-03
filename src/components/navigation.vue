@@ -7,7 +7,7 @@
 
     <v-spacer></v-spacer>
 
-    <v-toolbar-items   class=" nav-links pr-5 ">
+    <v-toolbar-items   class=" nav-links">
 
         <v-btn color="#ffffff" flat class="text-none  custom-btn" v-for="link in links" :key="link.title" :to="link.link" :class="link.class">
             {{ link.title }}
@@ -44,8 +44,8 @@ links () {
                     link: '/blog'
                 },
                 {
-                    title: 'Space',
-                    link: ''
+                    title: 'Observations',
+                    link: '/explore'
                 }
     ]
     if (this.userIsAuthenticated) {

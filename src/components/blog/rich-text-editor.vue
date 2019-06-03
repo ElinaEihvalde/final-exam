@@ -11,8 +11,12 @@
                                 <img :src="coverImg">
                             </v-flex>
                         </v-layout>
-                        <v-text-field v-model="coverImg" placeholder="Upload image" name="coverImg" id="coverImg" color="#ffa000" required>
-                        </v-text-field>
+                      <!--   <v-btn ma-0 pa-0 :loading="loading3" :disabled="loading3" color="#ffa000" class="white--text" @click="fileUpload">Browse cover photo<v-icon right dark>perm_media</v-icon>
+                        </v-btn>
+                        <input type="file"  @change="onFilePicked" ref="fileInput" accept="image">
+                        <p>or choose a link</p> -->
+                         <v-text-field v-model="coverImg" placeholder="Upload image" name="coverImg" id="coverImg" color="#ffa000" required>
+                        </v-text-field> 
                         <v-text-field v-model="title" placeholder="Blog title" name="title" id="title" color="#ffa000" required>
                         </v-text-field>
                         <v-textarea v-model="description" counter="200" placeholder="Short description" name="description" id="description" color="#ffa000" rows="2" auto-grow required>
@@ -83,12 +87,12 @@
                 </v-layout>
 
                 <v-layout>
-                    <v-flex  v-model="content" name="content" id="content">
-                        
+                    <v-flex v-model="content" name="content" id="content">
+
                         <editor-content required class="editor__content" :editor="editor" />
-                      
+
                     </v-flex>
-                 
+
                 </v-layout>
 
                 <v-layout pt-3>
@@ -133,7 +137,7 @@ export default {
 
     },
     data() {
-        
+
         return {
             editor: new Editor({
                 extensions: [
@@ -156,11 +160,11 @@ export default {
                     getHTML
                 }) => {
                     this.html = getHTML()
-                
+
                 },
 
             }),
-             valid: false,
+            valid: false,
             coverImg: '',
             title: '',
             description: '',
@@ -176,6 +180,10 @@ export default {
     },
 
     methods: {
+
+      /*   fileUpload() {
+            this.$refs.fileInput.click()
+        }, */
 
         onCreatePost() {
             console.log({

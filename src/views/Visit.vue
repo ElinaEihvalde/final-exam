@@ -3,10 +3,10 @@
     <v-container fluid px-0>
     <v-container  fluid mt-6>   
     <v-layout justify-center>
-        <v-flex xs8>
+        <v-flex xs12 md8 lg8 :class="{'px-4': $vuetify.breakpoint.smAndDown}">
             <h6 class="title  text-xs-center">LEARN ABOUT US</h6>
-            <h2 class="display-2 text-xs-center accent-text pt-2"> Observatory and Guest house</h2>
-            <p class="pt-3 body-1 text-xs-center">Learn and expolre with Lielzeltinu observatory. Read about astronomy related news, travels, observations succesess and ofcourse enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+            <h2 class="display-2 text-xs-center accent-text " :class="{'pt-0': $vuetify.breakpoint.smAndDown, 'pt-2': $vuetify.breakpoint.mdAndUp}"> Observatory and Guest house</h2>
+            <p class="body-1 text-xs-center" :class="{'pt-1': $vuetify.breakpoint.smAndDown, 'pt-3': $vuetify.breakpoint.mdAndUp}">Learn and expolre with Lielzeltinu observatory. Read about astronomy related news, travels, observations succesess and ofcourse enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
         </v-flex>
     </v-layout>
 </v-container>
@@ -23,11 +23,11 @@
         <about/>
     </v-layout>
 
-<v-layout id="visit-second-section" class="my-5" align-center>
-    <v-flex xs5 offset-xs1>
+<v-layout id="visit-second-section" class="my-5" align-center :class="{'column px-4': $vuetify.breakpoint.smAndDown}">
+    <v-flex xs5  :class="{ 'order-xs2': $vuetify.breakpoint.smAndDown,'offset-xs1': $vuetify.breakpoint.mdAndUp}">
 <contactForm/>
     </v-flex>
-            <v-flex xs4 offset-xs1>
+            <v-flex xs4 :class="{ 'offset-xs1': $vuetify.breakpoint.mdAndUp}">
                 <h2 class="text-xs-center display-1 ">Send Us a Message</h2>
                 <p class="text-xs-center body-1 pt-3">Send us a message to find about the availability of the observatory. We usuallly respond withing 24 hours. We rearely use e-mail for contacting, so it is important you leave your phone number so we can contact with you faster.</p>
             </v-flex>
@@ -55,5 +55,27 @@ export default {
   }
   .accent-text {
     color: #FFA000;
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+
+.accent-text { font-size: 6.5vw!important; line-height: 1.5!important;}
+.body-1{font-size: 3.8vw!important}
+
+
+}
+
+@media only screen and (max-width: 960px) {
+  /* Large tablet to laptop */
+.accent-text { font-size: 7vw!important; line-height: 1.5!important;}
+.body-1{font-size: 3.8vw!important}
+.title {font-size: 3.5vw!important;}
+}
+
+@media only screen and (max-width: 1260px) {
+  /* Desktop */
+
 }
 </style>

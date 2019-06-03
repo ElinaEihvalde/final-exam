@@ -28,4 +28,8 @@ export default {
 
 <style>
 
+#app{
+    overflow-x: hidden;
+}
+
 </style>

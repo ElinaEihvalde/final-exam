@@ -75,6 +75,7 @@
       label="Message" 
       required 
       id="message"
+      rows="2"
       @input="$v.email.$touch()" 
       @blur="$v.email.$touch()"
       color="#ffa000"

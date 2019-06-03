@@ -5,13 +5,13 @@
         <v-progress-circular size="56" width="5" color="#ffa000" :indeterminate="true" v-if="loading"></v-progress-circular>
         
     </v-layout>
-    <v-layout row wrap v-if="!loading">
-        <v-flex xs5 offset-xs1 v-for="post in posts" :key="post.id" >
+    <v-layout row wrap v-if="!loading" :class="{'column px-0 justify-center': $vuetify.breakpoint.smAndDown}">
+        <v-flex xs6 md5  :class="{'offset-xs1': $vuetify.breakpoint.mdAndUp}" v-for="post in posts" :key="post.id" >
             <v-card flat  class="card-background">
                 <v-img :src="post.coverImg" cover max-height="20vw">
                 
                 </v-img>
-                <v-card-title>
+                <v-card-title height="100%">
                     <div>
                       
                         <p class="grey--text">{{post.date | date}}</p>

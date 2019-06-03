@@ -35,7 +35,14 @@ export default new Router({
     },
     {
       path: '/visit-us/:id',
-      name: 'visit-us-guesthouse'
+      name: 'visit-us-guesthouse',
+      props: true,
+      component: () => import('./views/Visit.vue')
+    },
+    {
+      path: '/explore',
+      name: 'explore',
+      component: () => import('./views/space.vue')
     },
     {
       path: '/create-blog',

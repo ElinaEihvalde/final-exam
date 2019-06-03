@@ -107,4 +107,27 @@ export default {
 .btn-size {
     font-size: 1.3vw!important;
 }
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+.logo {padding-left: 10px; font-size: 3.5vw;}
+.banner-txt h3{font-size: 4vw; padding-right: 15%;}
+.banner-txt h1 {font-size: 8vw !important; line-height: 1.25!important;}
+.v-btn__content {font-size: 3vw !important;}
+
+}
+
+@media only screen and (max-width: 960px) {
+  /* Large tablet to laptop */
+
+}
+
+@media only screen and (max-width: 1260px) {
+  /* Desktop */
+
+}
 </style>

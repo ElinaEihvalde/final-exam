@@ -16,7 +16,7 @@
             <h2 >  <!-- class="display-1" -->{{info.title}}</h2>
             <div class="line" ></div>
             <p class="body pt-2 ">{{info.content}}</p>
-             <v-btn v-bind:class="info.button" :to="{ name:info.link, hash:info.hash }" flat color="#ffa000" class="button-margin">take me<v-icon right>trending_flat</v-icon></v-btn>
+             <v-btn v-bind:class="info.button" :to="info.link" flat color="#ffa000" class="button-margin">take me<v-icon right>trending_flat</v-icon></v-btn>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -33,12 +33,13 @@ export default {
   },
    data() {
         return {
+          props: ['id'],
             infos: [{
                     id: 1,
                     title: 'OBSERVATORY',
                     content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
                     pic: require('@/assets/telescope.svg'),
-                    link: 'visit-us',
+                    link: '/visit-us/#observatory',
                     hash: '#observatory'
                 },
                 {
