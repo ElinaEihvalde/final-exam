@@ -39,22 +39,21 @@ export default {
                     title: 'OBSERVATORY',
                     content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
                     pic: require('@/assets/telescope.svg'),
-                    link: '/visit-us/#observatory',
-                    hash: '#observatory'
+                    link: '/visit-us',
                 },
                 {
                     id: 2,
                     title: 'GUESTHOUSE',
                     content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
                     pic: require('@/assets/house.svg'),
-                    link: '/visit-us/#guesthouse',
+                    link: '/visit-us',
                 },
                {
                     id: 3,
                     title: 'EXPLORATION',
                     content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
                     pic: require('@/assets/solar-system.svg'),
-                    link: '/visit-us/visit-us-guesthouse',
+                    link: '/space',
                 },
             ]
         }

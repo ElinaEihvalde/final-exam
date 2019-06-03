@@ -123,11 +123,22 @@ export default {
 
 @media only screen and (max-width: 960px) {
   /* Large tablet to laptop */
-
+.v-toolbar__content, .v-toolbar__extension {height: 65px !important;}
+.logo {padding-left: 10px; font-size: 3.5vw;}
+.banner-txt h3{font-size: 3vw; padding-right: 15%;}
+.banner-txt h1 {font-size: 6.5vw !important; line-height: 1.25!important;}
+.v-btn__content {font-size: 2.5vw !important;}
+.home .pl-5 {padding-left: 25px !important;}
 }
 
-@media only screen and (max-width: 1260px) {
-  /* Desktop */
-
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+.logo {padding-left: 10px; font-size: 3.5vw;}
+.banner-txt h3{font-size: 5.5vw; padding-right: 15%;}
+.banner-txt h1 {font-size: 11vw !important; line-height: 1.25!important;}
+.v-btn__content {font-size: 4.5vw !important;}
+.home .pl-5 {padding-left: 25px !important;}
 }
+
+
 </style>

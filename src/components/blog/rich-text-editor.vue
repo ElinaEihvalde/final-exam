@@ -175,7 +175,7 @@ export default {
 
     computed: {
         isValid() {
-            return this.title !== "" && this.description !== "" && this.content !== "" && this.coverImg !== "" && this.description.length <= 200;
+            return this.title !== "" && this.description !== "" && this.content !== "" && this.coverImg !== "" && this.description.length <= 200 && this.title.length <= 80;
         }
     },
 

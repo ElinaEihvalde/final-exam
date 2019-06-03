@@ -27,9 +27,7 @@ export default {
 </script>
 
 <style>
-
 #app{
-    overflow-x: hidden;
+overflow-x: hidden;
 }
-
 </style>

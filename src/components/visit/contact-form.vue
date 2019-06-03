@@ -68,18 +68,37 @@
         </v-date-picker>
       </v-menu>
 </v-flex>
+<v-flex xs6 pt-0>
+            <v-checkbox
+              id="observatory"
+              v-model="observatory"
+              label="Observatory"
+              color="#ffa000"
+              value="Observatory"
+              class="box"
+            ></v-checkbox> 
+</v-flex>
+<v-flex xs6 pt-0>
+            <v-checkbox
+              id="guesthouse"
+              v-model="guesthouse"
+              label="Guesthouse"
+              color="#ffa000"
+              value="Guesthouse"
+              class="box"
+            ></v-checkbox>
+</v-flex>
 <v-flex xs12>
       <v-textarea
       v-model="message"
-      :rules="inputRules" 
       label="Message" 
-      required 
       id="message"
       rows="2"
       @input="$v.email.$touch()" 
       @blur="$v.email.$touch()"
       color="#ffa000"
       auto-grow
+      rows="2"
       >
       </v-textarea>
 </v-flex>
@@ -117,7 +136,9 @@
       menu: false,
       modal: true,
       alert: false,
-    name: '',
+      name: '',
+/*     Observatory: 'Observatory',
+    Guesthouse: 'guesthouse', */
     nameRules: [
       v => !!v || 'Name is required',
     ],   
@@ -137,7 +158,7 @@
     }),
     computed: {
       valid() {
-      return this.name !== "" && this.phone !== "" && this.email !== "" && this.message !== "";
+      return this.name !== "" && this.phone !== "" && this.email !== "";
 }
     },
      methods: {
@@ -148,13 +169,15 @@
     },
   
     onSubmit () {
-    console.log({name: this.name, email: this.email, phone: this.phone, date: this.date, message: this.message})
+    /* console.log({name: this.name, email: this.email, phone: this.phone, date: this.date, message: this.message}) */
     const contactForm = {
     name: this.name,
     phone: this.phone,
     email: this.email,
     date: this.date,
-    message: this.message
+    message: this.message,
+    observatory: this.observatory,
+    guesthouse: this.guesthouse
     }
     this.$store.dispatch('messages', contactForm)
     this.$refs.form.reset()
