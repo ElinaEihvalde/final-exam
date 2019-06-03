@@ -8,7 +8,7 @@
     <v-layout row wrap v-if="!loading" :class="{'column px-0 justify-center': $vuetify.breakpoint.smAndDown}">
         <v-flex xs6 md5  :class="{'offset-xs1': $vuetify.breakpoint.mdAndUp}" v-for="post in posts" :key="post.id" >
             <v-card flat  class="card-background">
-                <v-img :src="post.coverImg" cover max-height="20vw">
+                <v-img :src="post.coverImg" cover class="img-height">
                 
                 </v-img>
                 <v-card-title height="100%">
@@ -53,4 +53,6 @@ export default {
     margin-left: 0;
 }
 .card-background {background-color: #f7f4f1;}
+
+.img-height {max-height: 20vw;}
 </style>
