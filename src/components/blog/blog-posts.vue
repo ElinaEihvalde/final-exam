@@ -2,7 +2,7 @@
 <v-container fluid grid-list-xxl>
     <v-layout row wrap>
         <v-flex xs5 offset-xs1 v-for="post in posts" :key="post.id">
-            <v-card flat class="card-background">
+            <v-card flat  class="card-background">
                 <v-img :src="post.coverImg" cover max-height="20vw">
                 
                 </v-img>
@@ -18,7 +18,7 @@
                     </div>
                 </v-card-title>
                 <v-card-actions>
-                    <v-btn :to="'/blog/' + post.id" flat color="#ffa000">read more <v-icon right>trending_flat</v-icon>
+                    <v-btn :to="'/blog/' + post.id" class="button-margin" flat color="#ffa000">read more <v-icon right>trending_flat</v-icon>
                     </v-btn>
                 </v-card-actions>
             </v-card>

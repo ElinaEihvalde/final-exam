@@ -67,5 +67,5 @@ export default {
     padding-top: 1.5vw;
 }
 
-.line {margin-top: 20px;}
+
 </style>

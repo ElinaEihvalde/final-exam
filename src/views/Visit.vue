@@ -4,6 +4,14 @@
     <v-layout pa-0 align-center  id="visit-first-section">
      
         <visitText></visitText>
+        
+    </v-layout>
+    <v-layout>
+        <v-divider></v-divider>
+    </v-layout>
+    <v-layout>
+        
+        <about/>
     </v-layout>
 
 <v-layout id="visit-second-section" align-center>
@@ -15,12 +23,13 @@
 </template>
 
 <script>
-/* import about from '../components/visit/about-us' */
+import about from '../components/visit/about-us' 
 
 import visitText from '../components/visit/visit-text'
 import contactForm from '../components/visit/contact-form'
 export default {
     components: {
+        about,
     visitText,
     contactForm,
     }

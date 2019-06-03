@@ -5,7 +5,7 @@
             <h1 class="display-4">Your Gateway To The Universe</h1>
             <div class="line"> </div>
             <h3>STARGAZING EXPERIENCE WITH LIELZELTINU OBSERVATORY WILL BRING YOU Closer to stars</h3>
-            <v-btn class="custom-btn" ripple flat right pa-0 dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
+            <v-btn class="custom-btn btn-size mt-3" ripple flat right  dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
             </v-btn>
         </v-flex>
     </div>
@@ -26,15 +26,14 @@
 /* import mainText from '../components/mainText'   */
 import homeText from '../components/home-text'
 import homeSection from '../components/home-section'
-import homeBlog from '../components/home-blog'
+
 
 
 export default {
     components: {
     /*    mainText, */
        homeText,
-       homeSection,
-        homeBlog
+       homeSection
     },
 
 }
@@ -44,9 +43,7 @@ export default {
 <style>
 
 
-.home {
-    background-image: url('../assets/observatory.jpg') ; 
-}
+
 
 #first-section, .bckgr {
     background-color: #050505;
@@ -57,18 +54,9 @@ export default {
     background-size: cover;
     background-position: bottom right;
     overflow: hidden;
+    background-image: url('../assets/observatory.jpg') ; 
 }
 
-.vidCont {
-    position: relative;
-}
-
-#myVideo {
-    opacity: 0.3;
-    height: fit-content;
-    vertical-align: middle;
-    width: 100%;
-}
 
 .banner-txt {
     background: rgba(0, 0, 0, 0);
@@ -109,9 +97,14 @@ export default {
 }
 
 .line {
+    margin-top:unset;
     width: 30%;
      border-bottom: 2.5px solid #ffa000;
    /*  border-bottom: 2.5px solid rgb(218, 152, 12); */
 
+}
+
+.btn-size {
+    font-size: 1.3vw!important;
 }
 </style>

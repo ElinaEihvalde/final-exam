@@ -1,7 +1,7 @@
 <template>
 <v-container fluid pt-2 px-0>
     <v-layout class="visit-text" grid-list-xl v-for="text in texts" :key="text.id" :id="text.id" align-center>
-    <v-flex pt-4 class="image" xs4 v-bind:class="text.class" data-aos="fade-up" data-aos-duration="1000">
+    <v-flex class="slides" xs4 v-bind:class="text.class" data-aos="fade-up" data-aos-duration="1000" >
         <div v-bind:is="text.comp"></div>
     </v-flex>
     <v-flex xs5 justify-start class="offset-xs1"  data-aos="fade-up" data-aos-duration="2500">
@@ -26,7 +26,7 @@ export default {
     data() {
         return {
             texts: [{
-                    id: 1,
+                    id: 'observatory',
                     title: 'OBSERVATORY',
                     content: '  Especially for lovers of astronomy</strong> and just travelers near our  house and observatory, we built a small guest house (with the name "Albireo") for 6 double rooms. We did this so that after the observations (and in the winter, when it is cold - and in the process), the guests could rest and warm up. Two of the 6 rooms have one large double bed, three have one bunk bed, and one has two separate single beds. Five of the six rooms are equipped with a toilet with a shower, one room (where is a bunk bed) - a toilet with a bath. The rooms with a bunk bed have the opportunity to accommodate a cot, then the room can accommodate three people. It is possible to order breakfast in the morning. In addition, on the ground floor there is a kitchen and a coffee machine, where guests can prepare their own food. The guest house has a parking lot. The price of a double room for two is 35, for one - 25 Euro per day. Additional folding bed - 10 euros. To book a room, call + 371-22082212. ',
                     pic: require('@/assets/img1.jpg'),
@@ -34,7 +34,7 @@ export default {
                     comp: sliderObservatory,
                 },
                 {
-                    id: 2,
+                    id: 'guesthouse',
                     title: 'GUESTHOUSE',
                     content: '  Especially for lovers of astronomy</strong> and just travelers near our  house and observatory, we built a small guest house (with the name "Albireo") for 6 double rooms. We did this so that after the observations (and in the winter, when it is cold - and in the process), the guests could rest and warm up. Two of the 6 rooms have one large double bed, three have one bunk bed, and one has two separate single beds. Five of the six rooms are equipped with a toilet with a shower, one room (where is a bunk bed) - a toilet with a bath. The rooms with a bunk bed have the opportunity to accommodate a cot, then the room can accommodate three people. It is possible to order breakfast in the morning. In addition, on the ground floor there is a kitchen and a coffee machine, where guests can prepare their own food. The guest house has a parking lot. The price of a double room for two is 35, for one - 25 Euro per day. Additional folding bed - 10 euros. To book a room, call + 371-22082212. ',
                     pic: require('@/assets/img2.jpg'),
@@ -50,19 +50,19 @@ export default {
 
 </script>
 
-<style >
+<style>
 .visit-text {
     color: #050505!important;
-    height: 92.5vh;
+    height: 100vh;
     background-color: #F7F4F1;
 }
 
-.px-20 {
-    padding: 0 10%;
+.slides{
+    height: 80vh;
 }
 .body-1 {
     padding-top: 1.5vw;
 }
 
-.line {margin-top: 20px;}
+
 </style>

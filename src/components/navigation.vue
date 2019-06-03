@@ -1,5 +1,5 @@
 <template>
-<v-toolbar class="nav-bar" absolute color="#050505" flat>
+<v-toolbar class="nav-bar" color="#050505" absolute flat>
 
     <v-toolbar-title>
     <router-link to="/" class="logo">LIELZELTIŅI</router-link>
@@ -7,16 +7,16 @@
 
     <v-spacer></v-spacer>
 
-    <v-toolbar-items class="hidden-sm-and-down nav-links ">
+    <v-toolbar-items   class=" nav-links pr-5 ">
 
-        <v-btn color="#ffffff" flat class="text-none font-weight-light custom-btn" v-for="link in links" :key="link.title" :to="link.link">
+        <v-btn  color="#ffffff" ripple flat class="text-none text-xs-left custom-btn" v-for="link in links" :key="link.title" :to="link.link">
             {{ link.title }}
         </v-btn>
-<v-divider vertical> </v-divider>
+<!-- <v-divider vertical> </v-divider>
     
 
         <v-btn flat>LV</v-btn>
-        <v-btn flat>ENG</v-btn>
+        <v-btn flat>ENG</v-btn> -->
     </v-toolbar-items>
 </v-toolbar>
  
@@ -53,8 +53,9 @@ export default {
 }
 
 .nav-links {
-    margin-left: 5em;
+   /*  margin-left: 5em; */
     height: auto !important;
+ 
 }
 
 .logo {
@@ -68,8 +69,12 @@ export default {
 .nav-bar {
     animation-name: slideIn;
     animation-duration: 1.8s;
-    border-bottom: 0.5px #dbdbdb83 solid!important;
+   
+   /*  border-bottom: 0.5px #dbdbdb83 solid!important; */
 }
+
+
+
 
 @keyframes slideIn {
     0% {
@@ -90,14 +95,21 @@ export default {
 .custom-btn {
     position: relative;
     margin-left: 1.2vw !important;
+    padding: 0!important;
     font-size: 1.2vw;
-    padding: 0 !important;
+    
 }
 
 .custom-btn::before {
    
     width: unset !important;
 }
+
+/* .custom-btn:hover{
+    font-size: 1.3vw;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in;
+} */
 
 .custom-btn::after {
     content: '';
@@ -108,7 +120,7 @@ export default {
     bottom: -2px;
     left: 0;
     background-color: #ffa000
-        /* #0FCF9B */
+      
     ;
     transform-origin: bottom right;
     transition: transform 0.4s ease-in;
@@ -117,5 +129,5 @@ export default {
 .custom-btn:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
+} 
 </style>
