@@ -2,20 +2,20 @@
   <v-container fluid pa-0 class="seperator-background" grid-list-xxl>
     <v-layout row align-center justify-center class="seperator"  my-0>
       <v-flex xs10>
-        <v-layout class="mb-4" data-aos="fade-up" data-aos-duration="2000">             
-          <v-flex xs6 offset-xs3  align-center justify-center class="text-align">
-            <h2 class="display-2 accent-text mb-5">Articles and Program</h2>
-            <p class="body">Learn and explore with Lielzeltinu observatory. We offer you variety of information for astronomers and those who are only interested in astronomy.<br>Read about astronomy related news, travels, observations succesess and of course enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+        <v-layout  class="mb-4" data-aos="fade-up" data-aos-duration="2000">             
+          <v-flex xs6 offset-xs3  justify-center >
+            <h2 class="display-2 text-xs-center accent-text mb-4">Articles and Program</h2>
+            <p class="body text-xs-center ">Learn and explore with Lielzeltinu observatory. We offer you variety of information for astronomers and those who are only interested in astronomy.<br>Read about astronomy related news, travels, observations succesess and of course enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
         </v-flex>
         </v-layout>
         <v-divider dark></v-divider>
-        <v-layout row data-aos="fade-up" data-aos-duration="1500">
-          <v-flex xs4 v-bind:class="info.class" py-5 v-for="info in infos" :key="info.id"  class="info-img" mt-5>
-            <v-img  v-bind:src="info.pic" class="info-pic mb-4 ml-4 align-center">
+        <v-layout justify-center row data-aos="fade-up" data-aos-duration="1500">
+          <v-flex  -center xs4 v-bind:class="info.class" py-5 v-for="info in infos" :key="info.id"  class="info-img" mt-5>
+            <v-img  v-bind:src="info.pic" class="info-pic mb-4 ml-4 center">
             </v-img>
-            <h2> <!-- class="display-1" -->{{info.title}}</h2>
+            <h2 >  <!-- class="display-1" -->{{info.title}}</h2>
             <div class="line" ></div>
-            <p class="body pt-2">{{info.content}}</p>
+            <p class="body pt-2 ">{{info.content}}</p>
              <v-btn v-bind:class="info.button" :to="{ name:info.link, hash:info.hash }" flat color="#ffa000" class="button-margin">take me<v-icon right>trending_flat</v-icon></v-btn>
           </v-flex>
         </v-layout>
@@ -84,7 +84,7 @@ export default {
     width: unset !important;
 }
 
-
+.center { margin: auto}
 
 .button-margin::after {
     content: '';
@@ -106,4 +106,8 @@ export default {
 }  
 
 .bilde {width: 100%; height: 250px; background-image: url('../assets/home-small.jpg') ; }
+
+.accent-text {
+    color: #FFA000;
+}
 </style>

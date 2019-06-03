@@ -1,14 +1,15 @@
 <template>
 
-    <v-container fluid mt-6>
+    <v-container fluid px-0>
+    <v-container  fluid mt-6>   
     <v-layout justify-center>
         <v-flex xs8>
             <h6 class="title  text-xs-center">LEARN ABOUT US</h6>
             <h2 class="display-2 text-xs-center accent-text pt-2"> Observatory and Guest house</h2>
-            <p class="pt-3 text-xs-center">Learn and expolre with Lielzeltinu observatory. Read about astronomy related news, travels, observations succesess and ofcourse enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+            <p class="pt-3 body-1 text-xs-center">Learn and expolre with Lielzeltinu observatory. Read about astronomy related news, travels, observations succesess and ofcourse enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
         </v-flex>
     </v-layout>
-
+</v-container>
 
     <v-layout pa-0 align-center  id="visit-first-section">
      
@@ -20,11 +21,11 @@
     </v-layout>
     <v-layout>
         
-        <about/>
+        <about />
     </v-layout>
 
 <v-layout id="visit-second-section" align-center>
-    <v-flex xs5 offset-xs1>
+    <v-flex xs10 >
 <contactForm/>
     </v-flex>
 </v-layout>

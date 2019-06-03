@@ -1,6 +1,6 @@
 <template>
-<v-container fluid pt-2 px-0>
-    <v-layout class="visit-text" grid-list-xl v-for="text in texts" :key="text.id" :id="text.cigaretes" align-center>
+<v-container fluid pt-5 px-0>
+    <v-layout class="visit-text" grid-list-xl v-for="text in texts" :key="text.id" :id="text.cigaretes" >
     <v-flex class="slides" xs4 v-bind:class="text.class" data-aos="fade-up" data-aos-duration="1000" >
         <div v-bind:is="text.comp"></div>
     </v-flex>
@@ -62,9 +62,7 @@ export default {
 .slides{
     height: 80vh;
 }
-.body-1 {
-    padding-top: 1.5vw;
-}
+
 
 
 </style>
