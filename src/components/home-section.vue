@@ -5,7 +5,7 @@
         <v-layout  class="mb-4" data-aos="fade-up" data-aos-duration="2000">             
           <v-flex xs6 offset-xs3  justify-center >
             <h2 class="display-2 text-xs-center accent-text mb-4">Articles and Program</h2>
-            <p class="body text-xs-center ">Learn and explore with Lielzeltinu observatory. We offer you variety of information for astronomers and those who are only interested in astronomy.<br>Read about astronomy related news, travels, observations succesess and of course enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+            <p class="body text-xs-center">Learn and explore with Lielzeltinu observatory. We offer you variety of information for astronomers and those who are only interested in astronomy.<br>Read about astronomy related news, travels, observations succesess and of course enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
         </v-flex>
         </v-layout>
         <v-divider dark></v-divider>
@@ -37,21 +37,21 @@ export default {
             infos: [{
                     id: 1,
                     title: 'OBSERVATORY',
-                    content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
+                    content: 'Have you ever experienced a romantic weekend full of stargazing? Learn about space and expand your horizon together with us.',
                     pic: require('@/assets/telescope.svg'),
                     link: '/visit-us',
                 },
                 {
                     id: 2,
                     title: 'GUESTHOUSE',
-                    content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
+                    content: 'The nearby guesthouse welcomes all the guests to spend the night, prices and seasonal offers for an unforgettable stay!',
                     pic: require('@/assets/house.svg'),
                     link: '/visit-us',
                 },
                {
                     id: 3,
                     title: 'EXPLORATION',
-                    content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
+                    content: 'Not sure what you can observe during the time of your visit? Find out about the seasons and space objects that you can see now.',
                     pic: require('@/assets/solar-system.svg'),
                     link: '/space',
                 },

@@ -38,7 +38,7 @@ export default {
                     src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob3.jpg?alt=media&token=d4ddf09b-0399-485b-a8e2-854793405a53',
                 },
                 {
-                    src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob3.jpg?alt=media&token=d4ddf09b-0399-485b-a8e2-854793405a53',
+                    src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob4.jpg?alt=media&token=ed743c9a-e1bf-408d-83bb-d2b7ddf18cab',
                 },
                 {
                     src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob5.jpg?alt=media&token=1f5de7cc-fef5-406c-99b1-ace0f1a8bb2d',
