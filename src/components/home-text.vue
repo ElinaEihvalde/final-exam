@@ -34,8 +34,8 @@ export default {
                 },
                 {
                     id: 2,
-                    title: 'EXPLORE WITH US',
-                    content: 'Lorem ipsum dolor sit amet, consectetur voluptatibus rerum error soluta at accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt mollitia, eos architecto alias consequuntur voluptatibus rerum error soluta at accusantium?',
+                    title: 'LEARN ABOUT SPACE',
+                    content: 'We often post articles and pictures about our awesome observations... You can learn new and interesting things about space that you have never thought possible, not only it is educational but it also gives you possibility to explore on your own!',
                     pic: require('@/assets/img2.jpg'),
                     class: 'order-xs2',
                 },
