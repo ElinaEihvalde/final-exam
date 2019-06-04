@@ -14,10 +14,10 @@ export default {
   data() {
     return {
       items: [
-          {src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'},
-          {src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'},
-          {src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'},
-          {src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'}
+          {src: 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/430453main_crabmosaic_hst_big_full.jpg'},
+          {src: 'http://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_08052016.jpg'},
+          {src: 'http://www.nasa.gov/sites/default/files/thumbnails/image/hubble_friday_04282016.jpg'},
+          {src: 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/pia17255.jpg'}
         ]
     };
   }

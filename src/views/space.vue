@@ -6,7 +6,7 @@
         <v-flex xs12 md8 lg8 :class="{'px-4': $vuetify.breakpoint.smAndDown}">
             <h6 class="title  text-xs-center">FIND OUT MORE</h6>
             <h2 class="display-2 text-xs-center accent-text" :class="{'pt-0': $vuetify.breakpoint.smAndDown, 'pt-2': $vuetify.breakpoint.mdAndUp}"> What can you observe in Lielzeltiņi</h2>
-            <p class="pt-3 body-1 text-xs-center" :class="{'pt-1': $vuetify.breakpoint.smAndDown, 'pt-3': $vuetify.breakpoint.mdAndUp}">Learn and expolre with Lielzeltinu observatory. Read about astronomy related news, travels, observations succesess and ofcourse enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+            <p class="pt-3 body-1 text-xs-center" :class="{'pt-1': $vuetify.breakpoint.smAndDown, 'pt-3': $vuetify.breakpoint.mdAndUp}">Here you can find information about what ojects can you observe in each of the different seasons of the year. You can visit us when the objects you want to see are visible or just simply come and find something new and exciting! </p>
         </v-flex>
     </v-layout>
 </v-container>

@@ -14,10 +14,10 @@ export default {
   data() {
     return {
       items: [
-          {src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'},
-          {src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'},
-          {src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'},
-          {src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'}
+          {src: 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/horsehead.jpg'},
+          {src: 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/110699main_image_feature_285_ajhfull.jpg'},
+          {src: 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/670968main_PIA15635_full.jpg'},
+          {src: 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/284895main_witchhead_nebula_full.jpg'}
         ]
     };
   }
