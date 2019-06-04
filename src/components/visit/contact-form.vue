@@ -93,7 +93,6 @@
       v-model="message"
       label="Message" 
       id="message"
-   
       @input="$v.email.$touch()" 
       @blur="$v.email.$touch()"
       color="#ffa000"

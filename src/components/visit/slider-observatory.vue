@@ -15,18 +15,20 @@ export default {
     data() {
         return {
             items: [{
-                    src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
-                    
+                    src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob1.jpg?alt=media&token=c9b35654-455a-41ed-af2e-79fec312f04c',
                 },
                 {
-                    src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-                   
+                    src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob2.jpg?alt=media&token=172ddc95-df27-40a2-b506-7266e549b73e',
                 },
                 {
-                    src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-                    
+                    src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob3.jpg?alt=media&token=d4ddf09b-0399-485b-a8e2-854793405a53',
                 },
-
+                {
+                    src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob3.jpg?alt=media&token=d4ddf09b-0399-485b-a8e2-854793405a53',
+                },
+                {
+                    src: 'https://firebasestorage.googleapis.com/v0/b/lielzeltini-80359.appspot.com/o/ob5.jpg?alt=media&token=1f5de7cc-fef5-406c-99b1-ace0f1a8bb2d',
+                }
             ]
         };
     }
