@@ -3,16 +3,16 @@
     <div align-center class="home">
         <v-flex lg6 pl-5 class="banner-txt text-xs-left">
             <h1 class="display-4">Your Gateway To The Universe</h1>
-            <div class="line"> </div>
+            <div class="line-home"> </div>
             <h3>Stargazing experience with Lielzeltiņu observatory will bring you closer to stars</h3>
-            <v-btn class="custom-btn btn-size mt-3"  flat right  dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
+            <v-btn class="custom-btn btn-size mt-3 "  flat right  dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
             </v-btn>
         </v-flex>
     </div>
     
-    <!--  <mainText></mainText>  -->
+
       <v-layout pa-0 align-center pt-0 id="first-section">
-          <home-text/>
+          <home-text class="hidden-sm-and-down"/>
           </v-layout>
 
     <v-layout pa-0 align-center pt-0 >
@@ -96,8 +96,9 @@ export default {
     color: #f4f4f4;
 }
 
-.line {
+.line-home, .line {
     margin-top:unset;
+   
     width: 30%;
      border-bottom: 2.5px solid #ffa000;
    /*  border-bottom: 2.5px solid rgb(218, 152, 12); */
@@ -118,7 +119,6 @@ export default {
 .banner-txt h3{font-size: 4vw; padding-right: 15%;}
 .banner-txt h1 {font-size: 8vw !important; line-height: 1.25!important;}
 .v-btn__content {font-size: 3vw !important;}
-
 }
 
 @media only screen and (max-width: 960px) {

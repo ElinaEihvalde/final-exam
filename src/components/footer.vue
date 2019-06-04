@@ -1,7 +1,7 @@
 <template>
   <v-footer height="auto" class="footer" pt-5 ma-0>
     <v-container fluid grid-list-xl pb-0 ma-0>
-      <v-layout align-start justify-space-around row wrap pt-3 mb-0>
+      <v-layout align-start justify-space-around row wrap pt-3 mb-0 :class="{'column px-4  justify-center': $vuetify.breakpoint.smAndDown}">
         <v-flex sm3 md3 lg2>
           <img class="none" src="../assets/logo.png">
         </v-flex>
@@ -9,7 +9,7 @@
           <strong>
             <p>Contact info:</p>
           </strong>
-          <p>Phone: 29 209 002</p>
+          <p>Phone:<a class="phone" href="tel: +37122082212"> + 371-22082212</a></p>
           <p>E-mail: sklimanskis@gmail.com</p>
         </v-flex>
         <v-flex xs6 sm3 md3 lg2>
@@ -48,6 +48,8 @@ export default {
   background-color: #000 !important;
   color: #bebebe !important;
 }
+
+.phone {text-decoration: none; color:#ffa000!important;}
 
 img {
   max-width: 50%;

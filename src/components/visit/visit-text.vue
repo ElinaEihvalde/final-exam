@@ -29,7 +29,7 @@ export default {
                     id: 1,
                     cigaretes: 'observatory',
                     title: 'OBSERVATORY',
-                    content: '  Especially for lovers of astronomy</strong> and just travelers near our  house and observatory, we built a small guest house (with the name "Albireo") for 6 double rooms. We did this so that after the observations (and in the winter, when it is cold - and in the process), the guests could rest and warm up. Two of the 6 rooms have one large double bed, three have one bunk bed, and one has two separate single beds. Five of the six rooms are equipped with a toilet with a shower, one room (where is a bunk bed) - a toilet with a bath. The rooms with a bunk bed have the opportunity to accommodate a cot, then the room can accommodate three people. It is possible to order breakfast in the morning. In addition, on the ground floor there is a kitchen and a coffee machine, where guests can prepare their own food. The guest house has a parking lot. The price of a double room for two is 35, for one - 25 Euro per day. Additional folding bed - 10 euros. To book a room, call + 371-22082212. ',
+                    content: '  Lielzeltiņu observatory in, Balgales Parish, was created in in 2011 by Sergej Klimanski , an entrepreneur from Riga, whose astronomy is a hobby since school years. It was built on old barn in middle of nowhere. This is a very appropriate place to build an observatory as it is far from cities with strong lighting but close enough for visitors.<br><br>Promoting astronomy in Latvia is the goal for the observatory therefore we often hosts events and gatherings for astronomers as well as everyone who is interested in learning something new. In the observatory it is possible to look at  the different objects through several telescopes and learn more about space and the Universe. Besides astronomy we also demonstrate and explain physics experiments in a fun way for kids and grownups.<br><br> We also offer events for schools and private parties.<br><strong>Lielzeltiņu observatory is a grate place to start your star tour. <strong><br><h5>Book your tour now!</h5>  ',
                     pic: require('@/assets/img1.jpg'),
                     class: 'order-xs2 order-md2 order-lg2 ' ,
                     comp: sliderObservatory,
@@ -39,7 +39,7 @@ export default {
                     id: 2,
                     cigaretes: 'visit-us-guesthouse',
                     title: 'GUESTHOUSE',
-                    content: '  Especially for lovers of astronomy</strong> and just travelers near our  house and observatory, we built a small guest house (with the name "Albireo") for 6 double rooms. We did this so that after the observations (and in the winter, when it is cold - and in the process), the guests could rest and warm up. Two of the 6 rooms have one large double bed, three have one bunk bed, and one has two separate single beds. Five of the six rooms are equipped with a toilet with a shower, one room (where is a bunk bed) - a toilet with a bath. The rooms with a bunk bed have the opportunity to accommodate a cot, then the room can accommodate three people. It is possible to order breakfast in the morning. In addition, on the ground floor there is a kitchen and a coffee machine, where guests can prepare their own food. The guest house has a parking lot. The price of a double room for two is 35, for one - 25 Euro per day. Additional folding bed - 10 euros. To book a room, call + 371-22082212. ',
+                    content: ' For all astronomy lovers and travelers we have built a small guest house called like the beautiful double star "Albireo".It is a perfect place to rest after a long night of interesting observations and new discoveries or to simply warm up in the cold winter nights after magnificent winter night-sky observation. <br> The guest house consists of 6 double rooms. There are two double rooms with king sized bed and four double rooms with single beds. All the rooms are equipped with restrooms and shower. Additionally it is possible to order breakfast in the morning or prepare own meal in the common kitchen. On the ground floor there is a coffee machine where you can prepare various hot drinks and enjoy them with astronomy magazine.  <h5>Price for two people per night: 35 EUR</h5><h5>Price for one person per night: 25 EUR</h5> <br> To make a reservation call <a class="phone" href="tel:+37122082212">+ 371-22082212</a> or make a reservation below. ',
                     pic: require('@/assets/img2.jpg'),
                     class: '  order-xs2 order-md1 order-lg1',
                     comp: sliderGuesthouse,
@@ -64,6 +64,8 @@ export default {
 .slides{
     height: 80vh;
 }
+
+.phone {text-decoration: none; color:#ffa000!important;}
 
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */

@@ -2,7 +2,8 @@
 <v-toolbar class="nav-bar" color="#050505" absolute flat>
 
     <v-toolbar-title>
-    <router-link to="/" class="logo">LIELZELTIŅI</router-link>
+        <router-link to="/"><img width="100%"  class="hidden-md-and-up" :src="logo" ></router-link>
+    <router-link to="/"  class="logo hidden-sm-and-down" >LIELZELTIŅI</router-link>
     </v-toolbar-title>
 
     <v-spacer></v-spacer>
@@ -29,6 +30,7 @@ export default {
 
     data() {
         return {
+            logo: require('@/assets/logo.png')
 
         }   
 },

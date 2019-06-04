@@ -6,12 +6,12 @@
         
     </v-layout>
     <v-layout row wrap v-if="!loading" :class="{'column px-0 justify-center': $vuetify.breakpoint.smAndDown}">
-        <v-flex xs6 md5  :class="{'offset-xs1': $vuetify.breakpoint.mdAndUp}" v-for="post in posts" :key="post.id" >
+        <v-flex xs6 md5 lg5 :class="{'offset-xs1': $vuetify.breakpoint.mdAndUp}" v-for="post in posts" :key="post.id" >
             <v-card flat  class="card-background">
                 <v-img :src="post.coverImg" cover class="img-height">
                 
                 </v-img>
-                <v-card-title height="100%">
+                <v-card-title class="pb-0" height="100%">
                     <div>
                       
                         <p class="grey--text">{{post.date | date}}</p>
@@ -55,4 +55,11 @@ export default {
 .card-background {background-color: #f7f4f1;}
 
 .img-height {max-height: 20vw;}
+
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+.img-height {max-height: 45vw;}
+}
+
 </style>
