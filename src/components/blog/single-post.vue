@@ -46,7 +46,7 @@ export default {
 
 .post-img {height: 80vh;}
 
-.bckr {background-color:#f7f4f1;}
+.bckr {background-color:#000000;}
 
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
