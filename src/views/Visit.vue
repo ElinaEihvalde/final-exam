@@ -8,27 +8,27 @@
             <v-btn class="custom-btn" ripple flat right pa-0 dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
             </v-btn>
         </v-flex>
+
+
     </div>
-    <v-layout pa-0 align-center pt-0 id="first-section">
+
+    <v-layout dar align-center pt-0 id="first-section">
         <!-- <mainText></mainText> -->
         <homeText></homeText>
     </v-layout>
-<fullWidthSeperator>
-</fullWidthSeperator>
-<homeText></homeText>
+
 </v-container>
 </template>
 
 <script>
 /* import mainText from '../components/mainText'  */
 import homeText from '../components/home-text'
-import fullWidthSeperator from '../components/full-width-seperator'
 
 export default {
     components: {
          /* mainText */
-       homeText,
-       fullWidthSeperator
+       homeText
+
     },
 
 }
@@ -36,12 +36,14 @@ export default {
 
 <style>
 
-
+.bckgr {
+    background-color: #dbdbdb;
+} 
 .home {
     background-image: url('../assets/observatory.jpg') ; 
 }
 
-#first-section, .bckgr {
+#first-section {
     background-color: #050505;
 }
 

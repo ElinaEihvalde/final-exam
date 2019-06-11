@@ -1,0 +1,65 @@
+<template>
+<v-container fluid  grid-list-xl px-20 >
+    <v-layout row wrap >
+        <v-flex xs6 v-for="post in posts" :key="post.id">
+            <v-card flat>
+                <v-img :src="post.image">
+                    <v-container fill-height fluid>
+                       
+                    </v-container>
+                </v-img>
+                <v-card-title>
+                    <div>
+                        <span class="grey--text">{{post.date}}</span><br>
+                        
+                        <h4 class="headline">{{post.title}}</h4>
+                        
+                        <p>{{post.description}}</p>
+                    </div>
+                </v-card-title>
+                <v-card-actions>
+                    <v-btn flat color="#ffa000">read more <v-icon right>trending_flat</v-icon></v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-flex>
+    </v-layout>
+</v-container>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            posts: [{
+                id: 1,
+                image: 'https://regmedia.co.uk/2017/01/10/moon.jpg?x=442&y=293&crop=1',
+                date: '23.05.2019',
+                title: 'Moon observation',
+                description: 'Our observatory has like telescope and stuff. We also have a comfy guesthouse where you can chill after watching stars lol. Our program consists of stuff.',
+                class: 'offset-xs1'
+                
+            },
+            {
+                id: 2,
+                image: 'https://img.webme.com/pic/s/sergei-astro/M82_Autosaveg56_PS_best_color_plane_vivid_res_50pct.jpg',
+                date: '23.05.2019',
+                title: 'Moon observation',
+                description: 'Our observatory has like telescope and stuff. We also have a comfy guesthouse where you can chill after watching stars lol. Our program consists of stuff.'
+            },
+             {
+                id: 3,
+                image: 'https://img.webme.com/pic/s/sergei-astro/NGC6992_Autosaveg50_NR_mask_fin_vivid_res_60pct.jpg',
+                date: '23.05.2019',
+                title: 'Moon observation',
+                description: 'Our observatory has like telescope and stuff. We also have a comfy guesthouse where you can chill after watching stars lol. Our program consists of stuff.'
+            }
+            ]
+        }
+    },
+}
+</script>
+
+
+<style>
+
+</style>

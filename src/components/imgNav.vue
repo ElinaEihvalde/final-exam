@@ -79,7 +79,6 @@ export default {
     .white--text:hover {
     transform: scale(1.3); 
     transition-duration: .5s;
-    
     }
  */
 </style>

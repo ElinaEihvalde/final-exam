@@ -1,5 +1,5 @@
 <template>
-<v-toolbar class="nav-bar" dark absolute color="rgba(0,0,0,0)" flat>
+<v-toolbar class="nav-bar" absolute color="rgba(0,0,0,0)" flat>
 
     <v-toolbar-title class="logo">LIELZELTIŅI</v-toolbar-title>
 
@@ -27,11 +27,11 @@ export default {
         return {
             links: [{
                     title: 'Visit us',
-                    link: ''
+                    link: '/visit-us'
                 },
                 {
                     title: 'News',
-                    link: ''
+                    link: '/blog'
                 },
                 {
                     title: 'Space',
@@ -62,7 +62,7 @@ export default {
 .nav-bar {
     animation-name: slideIn;
     animation-duration: 1.8s;
-    border-bottom: 0.5px rgba(255, 255, 255, 0.2) solid!important;
+    border-bottom: 0.5px #dbdbdb83 solid!important;
 }
 
 @keyframes slideIn {
@@ -89,7 +89,7 @@ export default {
 }
 
 .custom-btn::before {
-    color: pink;
+   
     width: unset !important;
 }
 
@@ -101,7 +101,7 @@ export default {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #E2BA36
+    background-color: #ffa000
         /* #0FCF9B */
     ;
     transform-origin: bottom right;
