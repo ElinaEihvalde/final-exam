@@ -52,7 +52,7 @@ links () {
     ]
     if (this.userIsAuthenticated) {
         links = [
-                            {
+                {
                     title: 'Visit us',
                     link: '/visit-us'
                 },
@@ -61,8 +61,8 @@ links () {
                     link: '/blog'
                 },
                 {
-                    title: 'Space',
-                    link: ''
+                    title: 'Observations',
+                    link: '/explore'
                 },
                 {
                     title: 'Create Post',

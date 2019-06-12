@@ -4,9 +4,9 @@
     <v-container  fluid mt-6>   
     <v-layout justify-center>
         <v-flex xs12 md8 lg8 :class="{'px-4': $vuetify.breakpoint.smAndDown}">
-            <h6 class="title  text-xs-center">LEARN ABOUT US</h6>
+            <h6 class="title  text-xs-center">ABOUT US</h6>
             <h2 class="display-2 text-xs-center accent-text " :class="{'pt-0': $vuetify.breakpoint.smAndDown, 'pt-2': $vuetify.breakpoint.mdAndUp}"> Observatory and Guest house</h2>
-            <p class="body-1 text-xs-center" :class="{'pt-1': $vuetify.breakpoint.smAndDown, 'pt-3': $vuetify.breakpoint.mdAndUp}">Learn and expolre with Lielzeltinu observatory. Read about astronomy related news, travels, observations succesess and ofcourse enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+            <p class="body-1 text-xs-center" :class="{'pt-1': $vuetify.breakpoint.smAndDown, 'pt-3': $vuetify.breakpoint.mdAndUp}">Find out more about what we can offer you. You can visit the observatory and spend the night in the comfortable guesthouse.</p>
         </v-flex>
     </v-layout>
 </v-container>

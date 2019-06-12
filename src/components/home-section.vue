@@ -53,7 +53,7 @@ export default {
                     title: 'EXPLORATION',
                     content: 'Not sure what you can observe during the time of your visit? Find out about the seasons and space objects that you can see now.',
                     pic: require('@/assets/solar-system.svg'),
-                    link: '/space',
+                    link: '/explore',
                 },
             ]
         }
