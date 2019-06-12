@@ -32,7 +32,7 @@ export default {
             texts: [{
                     id: 1,
                     title: 'Winter',
-                    content: "The most popular objects that can be observed in the crisp winter sky is the Crab Nebula, Algeiba, which is also known as the Lion's mane. The next one is Almach, a beautiful double star. Messier 35, a superb star cluster that appears as big as the moon. Sirius, the winter sparkler, also reffered to as a Dog Star, a star that appears a brilliant white with a tinge of blue. The Double Cluster of Perseus, a zig-zag row of five stars. The Hyades are among the nearest of star clusters." ,
+                    content: "<br><strong>The most popular objects that can be observed in the crisp winter sky are:</strong> <ul> <li>The Crab Nebula, Algeiba, which is also known as the Lion's mane</li> <li>Almach, a beautiful double star</li> <li>Messier 35, a superb star cluster that appears as big as the moon</li> <li>Sirius, the winter sparkler, also reffered to as a Dog Star, a star that appears a brilliant white with a tinge of blue</li><li> The Double Cluster of Perseus, a zig-zag row of five stars</li><li> The Hyades are among the nearest of star clusters</li></ul>" ,
                     pic: require('@/assets/img1.jpg'),
                    class: 'order-xs2 order-md2 order-lg2 ', 
                     comp: sliderWinter,
@@ -41,7 +41,7 @@ export default {
                 {
                     id: 2,
                     title: 'Spring',
-                    content: "Spring is one of the best seasons for skywatchers, if you are interested in what is possible to observe, here are some of the objects. Beehive cluster is visible with a naked eye, it is even more impressive with the telescope. Ursa Mayor is a beautiful galaxy that's interesting object of observation for experienced astronomers as well as beginners. There are also a lot of meteor showers that you can observe during this time of the year that is simply astonishing.",
+                    content: "<br> <strong>Spring is one of the best seasons for skywatchers, if you are interested in what is possible to observe, here are some of the objects:</strong> <ul><li> Beehive cluster is visible with a naked eye, it is even more impressive with the telescope</li><li> Ursa Mayor is a beautiful galaxy that's interesting object of observation for experienced astronomers as well as beginners.</li></ul> <br> <strong>There are also a lot of meteor showers that you can observe during this time of the year that is simply astonishing.",
                     pic: require('@/assets/img2.jpg'),
                      class: '  order-xs2 order-md1 order-lg1',
                     comp: sliderSpring,
@@ -50,7 +50,7 @@ export default {
                 {
                     id: 3,
                     title: 'Summer',
-                    content: "Summer is not the best time for skywatching but regardless, there are some objects worth seeing, such as the little constellation of Lyra consists of six faint stars that form a parallelogram. Draco the Dragon  is a very ancient star grouping and the brightest star there is a Eltanin that shines with an orange tinge. The Wild Ducks are several clouds of stars surroundedby a few dark regions for contrast can be seen with binoculars in the brightarea of the Milky Way about halfway between the star Altair and theconstellation of Sagittarius",
+                    content: "<br><strong> Summer is not the best time for skywatching but regardless, there are some objects worth seeing, such as:</strong> <ul><li> The little constellation of Lyra, which consists of six faint stars that form a parallelogram</li><li> Draco the Dragon, which is a very ancient star grouping and the brightest star there is a Eltanin that shines with an orange tinge. </li><li>The Wild Ducks are several clouds of stars surroundedby a few dark regions for contrast can be seen with binoculars in the brightarea of the Milky Way about halfway between the star Altair and theconstellation of Sagittarius</li></ul>",
                     pic: require('@/assets/img1.jpg'),
                    class: 'order-xs2 order-md2 order-lg2 ' ,
                     comp: sliderSummer,
@@ -59,7 +59,7 @@ export default {
                 {
                     id: 4,
                     title: 'Autumn',
-                    content: "This time of the year is rich with objects worth observing because the evenings are dark and sky's are clear. Andromeda galaxy is just one of the several deep-sky objects visible in this time of the year, so is the Triangulum Galaxy, both of these objects are visible with a naked eye and are even more interesting with a telescope. One ofe the most impressive objects is M22 that contains at least 75 000 stars. Globular cluster M13 is a deep-sky object that can be seen using binoculars and is definitely worth checking out.",
+                    content: "<br><strong>This time of the year is rich with objects worth observing because the evenings are dark and sky's are clear. These objects can be observed by a naked eye:</strong><ul><li> Andromeda galaxy is just one of the several deep-sky objects visible in this time of the year</li><li> The Triangulum Galaxy, both of these objects are visible with a naked eye and are even more interesting with a telescope.</li><li> One ofe the most impressive objects is M22 that contains at least 75 000 stars.</li><li> Globular cluster M13 is a deep-sky object that can be seen using binoculars and is definitely worth checking out.</li></ul>",
                     pic: require('@/assets/img2.jpg'),
                      class: '  order-xs2 order-md1 order-lg1',
                     comp: sliderAutumn,
