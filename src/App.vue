@@ -2,7 +2,6 @@
 <v-app>
     <navigation />
     <v-content>
-
         <router-view></router-view>
     </v-content>
     <foot />
@@ -21,12 +20,14 @@ export default {
 
     data() {
         return {
-            //
+        
         }
     }
 }
 </script>
 
 <style>
-
+#app{
+overflow-x: hidden;
+}
 </style>

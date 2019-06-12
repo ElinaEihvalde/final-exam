@@ -1,0 +1,145 @@
+<template>
+  <v-container fluid pa-0 class="seperator-background" grid-list-xxl>
+    <v-layout row align-center justify-center class="seperator"  my-0>
+      <v-flex xs10>
+        <v-layout  class="mb-4 hidden-sm-and-down" data-aos="fade-up" data-aos-duration="2000" :class="{' pa-0 pb-4 justify-center': $vuetify.breakpoint.smAndDown}" >             
+          <v-flex xs12 md10 lg6 :class="{'px-4': $vuetify.breakpoint.smAndDown, 'offset-xs3': $vuetify.breakpoint.mdAndUp}" justify-center >
+            <h2 class="display-2 text-xs-center accent-text mb-4">Articles and Program</h2>
+            <p class="body text-xs-center">Learn and explore with Lielzeltinu observatory. We offer you variety of information for astronomers and those who are only interested in astronomy.<br>Read about astronomy related news, travels, observations succesess and of course enjoy the latest sky photography taken right here in Lielzeltiņi. </p>
+        </v-flex>
+        </v-layout>
+        <v-divider class="hidden-sm-and-down" dark></v-divider>
+        <v-layout justify-center :class="{'column pa-0 pb-4 justify-center': $vuetify.breakpoint.smAndDown}" data-aos="fade-up" data-aos-duration="1500">
+          <v-flex   xs4 v-bind:class="info.class" py-5 v-for="info in infos" :key="info.id"  class="info-img" mt-5>
+            <v-img  v-bind:src="info.pic" class="info-pic mb-4 ml-4 text-xs-center">
+            </v-img>
+            <h2 class="dispay-2" :class="{'text-xs-center': $vuetify.breakpoint.smAndDown}">  <!-- class="display-1" -->{{info.title}}</h2>
+            <div class="line" ></div>
+            <p class="body pt-2 " :class="{'text-xs-center': $vuetify.breakpoint.smAndDown}">{{info.content}}</p>
+             <v-btn v-bind:class="info.button" :to="info.link" flat color="#ffa000" class="button-margin button-center">take me<v-icon right>trending_flat</v-icon></v-btn>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+        </v-layout>
+  </v-container>
+</template>
+
+
+<script>
+/* import quote from './quote'  */
+export default {
+  components: {
+    /* quote */
+  },
+   data() {
+        return {
+          props: ['id'],
+            infos: [{
+                    id: 1,
+                    title: 'OBSERVATORY',
+                    content: 'Have you ever experienced a romantic weekend full of stargazing? Learn about space and expand your horizon together with us.',
+                    pic: require('@/assets/telescope.svg'),
+                    link: '/visit-us',
+                },
+                {
+                    id: 2,
+                    title: 'GUESTHOUSE',
+                    content: 'The nearby guesthouse welcomes all the guests to spend the night, prices and seasonal offers for an unforgettable stay!',
+                    pic: require('@/assets/house.svg'),
+                    link: '/visit-us',
+                },
+               {
+                    id: 3,
+                    title: 'EXPLORATION',
+                    content: 'Not sure what you can observe during the time of your visit? Find out about the seasons and space objects that you can see now.',
+                    pic: require('@/assets/solar-system.svg'),
+                    link: '/explore',
+                },
+            ]
+        }
+    }
+};
+
+</script>
+
+<style>
+.seperator {
+  background-color: #050505;
+  color: #fff !important;
+ 
+}
+.seperator-background {background-color: #050505;  height: auto;}
+
+.info-pic {max-width: 20%;}
+
+
+.info-pic {
+     -webkit-filter: invert(1);
+   filter: invert(1);
+       -webkit-filter:invert(80%);
+     filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1');
+}
+.button-margin {margin: 0!important; padding: 0!important;  } 
+.button-margin::before {
+    width: unset !important;
+}
+
+.center { margin: auto}
+
+.button-margin::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffa000
+      
+    ;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in;
+} 
+.button-margin:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}  
+
+
+.accent-text {
+    color: #FFA000;
+}
+
+
+
+@media only screen and (max-width: 960px) {
+  /* Large tablet to laptop */
+  .display-2{ font-size: 5vw!important;}
+.accent-text { font-size: 7vw!important; line-height: 1.5!important;}
+.body-1{font-size: 3.5vw !important}
+.title {font-size: 3.5vw!important;}
+.visit-text {height: auto; text-align: center; }
+.line {margin: auto;}
+
+}
+
+
+@media only screen and (max-width: 1260px) {
+  /* Desktop */
+
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+
+.accent-text { font-size: 6.5vw!important; line-height: 1.5!important;}
+.body-1{font-size: 3.8!important}
+.margin {margin: auto;   
+    width: 30%;
+     border-bottom: 2.5px solid #ffa000;}
+.info-pic, .button-center{position: relative; left:32%;}
+
+
+
+}
+</style>

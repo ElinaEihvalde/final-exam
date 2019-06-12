@@ -1,85 +1,80 @@
 <template>
 <v-container fluid pa-0 class="bckgr">
     <div align-center class="home">
-
-        <!-- <span class="vidCont">
-            <video autoplay muted loop id="myVideo" >
-  <source src="../assets/Space.mp4" type="video/mp4">
-</video>
- </span> -->
-        <v-flex class="banner-txt text-xs-center">
-            <h1 class="display-4">Lielzeltinu Observatory</h1>
-            <h3>STARGAZING EXPERIENCE </h3>
+        <v-flex lg6 pl-5 class="banner-txt text-xs-left">
+            <h1 class="display-4">Your Gateway To The Universe</h1>
+            <div class="line-home"> </div>
+            <h3>Stargazing experience with Lielzeltiņu observatory will bring you closer to stars</h3>
+            <v-btn class="custom-btn btn-size mt-3 "  flat right  dark @click="$vuetify.goTo('#first-section', { offset: -10,  easing: 'easeInOutCubic', duration:1000})"> start your journey <v-icon right>trending_flat</v-icon>
+            </v-btn>
         </v-flex>
-
-        <v-layout  fill-height absolute  justify-center align-end >
-        <v-btn absolute  dark flat @click="$vuetify.goTo('#first-section', { offset: 0,  easing: 'easeInOutCubic', duration:800})">
-            <v-icon light> arrow_downward</v-icon> 
-        </v-btn>
-        
-        </v-layout>
-      
     </div>
-  
     
-        <v-layout align-center mt-5  id="first-section">
-            <mainText></mainText>
-        </v-layout>
-   
+
+      <v-layout pa-0 align-center pt-0 id="first-section">
+          <home-text class="hidden-sm-and-down"/>
+          </v-layout>
+
+    <v-layout pa-0 align-center pt-0 >
+<homeSection/>
+    </v-layout>
+
 </v-container>
 </template>
 
 <script>
-import mainText from '../components/mainText'
+/* import mainText from '../components/mainText'   */
+import homeText from '../components/home-text'
+import homeSection from '../components/home-section'
+
+
 
 export default {
     components: {
-        mainText
+    /*    mainText, */
+       homeText,
+       homeSection
     },
 
 }
+
 </script>
 
-<style scoped>
-.bckgr {
-    background-color: #050408;
-}
+<style>
 
+
+
+
+#first-section, .bckgr {
+    background-color: #050505;
+}
+#second-section {background-color: #f7f4f1;}
 .home {
     height: 100vh;
-     background-image: url('../assets/observatory.jpg');
     background-size: cover;
-    background-position: bottom;
+    background-position: bottom right;
     overflow: hidden;
-
-}
-p {color: white}
-.vidCont {
-    position: relative;
+    background-image: url('../assets/observatory.jpg') ; 
 }
 
-#myVideo {
-    opacity: 0.3;
-    height: fit-content;
-    vertical-align: middle;
-    width: 100%;
-}
 
 .banner-txt {
     background: rgba(0, 0, 0, 0);
     position: absolute;
-    top: 250px;
+    top: 30vh;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 2%;
     color: #fff;
     animation-name: fadeIn;
     animation-duration: 3s;
+
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
+
     }
 
     100% {
@@ -90,20 +85,59 @@ p {color: white}
 .banner-txt h1 {
     font-size: 5vw;
     line-height: 1.3;
-    padding-bottom: 2vw;
+    padding-bottom: 1vw;
 }
 
 .banner-txt h3 {
-    font-size: 1.8em;
-    font-weight: 300;
-    color: #E2BA36;
+    padding-top: 20px;
+    padding-right: 20%;
+    font-size: 1.3vw;
+    font-weight: 400;
+    color: #f4f4f4;
 }
 
-.line {
-    width: 100%;
-    margin-top: 20px;
-    border-bottom: 3px solid #fff;
-    z-index: 11;
+.line-home, .line {
+    margin-top:unset;
+   
+    width: 30%;
+     border-bottom: 2.5px solid #ffa000;
+   /*  border-bottom: 2.5px solid rgb(218, 152, 12); */
+
+}
+
+.btn-size {
+    font-size: 1.3vw!important;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+.logo {padding-left: 10px; font-size: 3.5vw;}
+.banner-txt h3{font-size: 4vw; padding-right: 15%;}
+.banner-txt h1 {font-size: 8vw !important; line-height: 1.25!important;}
+.v-btn__content {font-size: 3vw !important;}
+}
+
+@media only screen and (max-width: 960px) {
+  /* Large tablet to laptop */
+.v-toolbar__content, .v-toolbar__extension {height: 65px !important;}
+.logo {padding-left: 10px; font-size: 3.5vw;}
+.banner-txt h3{font-size: 3vw; padding-right: 15%;}
+.banner-txt h1 {font-size: 6.5vw !important; line-height: 1.25!important;}
+.v-btn__content {font-size: 2.5vw !important;}
+.home .pl-5 {padding-left: 25px !important;}
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+.logo {padding-left: 10px; font-size: 3.5vw;}
+.banner-txt h3{font-size: 5.5vw; padding-right: 15%;}
+.banner-txt h1 {font-size: 11vw !important; line-height: 1.25!important;}
+.v-btn__content {font-size: 4.5vw !important;}
+.home .pl-5 {padding-left: 25px !important;}
 }
 
 
