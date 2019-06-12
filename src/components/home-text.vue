@@ -5,12 +5,15 @@
     <v-flex class="image"  xs10 md6 lg4 offset-md1 offset-lg1 offset-xs0 v-bind:class="text.class" data-aos="fade-up" data-aos-duration="1000">
             <v-img  v-bind:src="text.pic">
         </v-img>
+        
     </v-flex>
     <v-flex xs5 :class="text.text" class="offset-xs0 offset-md1 offset-lg1" data-aos="fade-up" data-aos-duration="2500">
             <h3 class="display-2">{{text.title}}</h3>
             <div class="line"></div>
             <p class="body-1">{{text.content}}</p>
+            <button type="button" class="custom-btn btn-size mt-3  v-btn v-btn--flat v-btn--right theme--dark"><div class="v-btn__content"> Take me there <i aria-hidden="true" class="v-icon v-icon--right material-icons theme--dark">trending_flat</i></div></button>
     </v-flex > 
+    
     </v-layout>
     
 </v-container>
