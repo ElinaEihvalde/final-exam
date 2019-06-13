@@ -55,6 +55,21 @@ export default new Router({
       name: 'admin',
       component: () => import('./views/admin.vue')
     },
-  ]
+  ],
+
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    else if (to.hash) {
+      return {
+        selector: to.hash
+         , offset: { x: 0, y: 50 }
+      }
+    }
+     else {
+      return { x: 0, y: 0 }
+    }
+  }
   
 })

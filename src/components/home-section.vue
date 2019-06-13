@@ -16,7 +16,7 @@
             <h2 class="dispay-2" :class="{'text-xs-center': $vuetify.breakpoint.smAndDown}">  <!-- class="display-1" -->{{info.title}}</h2>
             <div class="line" ></div>
             <p class="body pt-2 " :class="{'text-xs-center': $vuetify.breakpoint.smAndDown}">{{info.content}}</p>
-             <v-btn v-bind:class="info.button" :to="info.link" flat color="#ffa000" class="button-margin button-center">take me<v-icon right>trending_flat</v-icon></v-btn>
+             <v-btn v-bind:class="info.button" :to="{ path: info.link, hash: info.hash}" flat color="#ffa000" class="button-margin button-center">take me<v-icon right>trending_flat</v-icon></v-btn>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -40,6 +40,7 @@ export default {
                     content: 'Have you ever experienced a romantic weekend full of stargazing? Learn about space and expand your horizon together with us.',
                     pic: require('@/assets/telescope.svg'),
                     link: '/visit-us',
+                    hash: 'observatory'
                 },
                 {
                     id: 2,
@@ -47,6 +48,7 @@ export default {
                     content: 'The nearby guesthouse welcomes all the guests to spend the night, prices and seasonal offers for an unforgettable stay!',
                     pic: require('@/assets/house.svg'),
                     link: '/visit-us',
+                    hash: 'visit-us-guesthouse'
                 },
                {
                     id: 3,
