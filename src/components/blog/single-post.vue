@@ -4,6 +4,11 @@
                 <v-icon>keyboard_backspace</v-icon>
                 Back
             </v-btn>
+            <v-spacer></v-spacer>
+              <v-btn  type="submit" @click="removePost" v-if="userIsAuthenticated" absolute right flat small class=" custom-btn">
+                <v-icon>delete_forever</v-icon>
+                Delete blog post
+            </v-btn>
     <v-layout row fixed :class="{'column pt-3': $vuetify.breakpoint.smAndDown}">
      
         <v-flex xs4 :class="{'pt-3': $vuetify.breakpoint.smAndDown, 'offset-xs1': $vuetify.breakpoint.mdAndUp}" >
@@ -28,11 +33,36 @@ export default {
 
     props: ['id'],
     computed: {
-
+userIsAuthenticated () {
+    return this.$store.getters.user !== null && this.$store.getters.user !== undefined
+},
         post() {
             return this.$store.getters.loadedPost(this.id);
+        },
+    },
+
+     methods: {
+        removePost() {
+            this.$store.dispatch("removePost", postData)
+            console.log({
+                title: this.title,
+                description: this.description,
+                coverImg: this.coverImg,
+                date: this.date,
+                content: this.content
+            })
+            const postData = {
+                title: this.title,
+                description: this.description,
+                coverImg: this.coverImg,
+                content: this.html,
+                date: this.date
+            }
+            
+            this.$router.push("/blog")
+
         }
-    }
+     }
 
 }
 </script>

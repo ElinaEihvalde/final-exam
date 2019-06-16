@@ -11,7 +11,7 @@
             <h3 class="display-2">{{text.title}}</h3>
             <div class="line"></div>
             <p class="body-1">{{text.content}}</p>
-            <button type="button" class="custom-btn btn-size mt-3  v-btn v-btn--flat v-btn--right theme--dark"><div class="v-btn__content"> Take me there <i aria-hidden="true" class="v-icon v-icon--right material-icons theme--dark">trending_flat</i></div></button>
+            <v-btn  :to="text.link" flat color="#fff" class="custom-btn btn-size mt-3 button-margin button-center">take me there<v-icon right>trending_flat</v-icon></v-btn>
     </v-flex > 
     
     </v-layout>
@@ -34,7 +34,9 @@ export default {
                     content: 'Lielzeltini Observatory is one of the most remarkable places to visit in Latvia. A small astronomical observatory which is close to the capital of Latvia and yet offers infinite views in the night sky, you have never imagined!',
                     pic: require('@/assets/img1.jpg'),
                     class: 'order-xs2 order-md2 order-lg2',
-                    text: 'order-xs1 order-md-1 order-lg-1'
+                    text: 'order-xs1 order-md-1 order-lg-1',
+                    link: '/visit-us'
+
                 },
                 {
                     id: 2,
@@ -42,7 +44,8 @@ export default {
                     content: 'We often post articles and pictures about our awesome observations... You can learn new and interesting things about space that you have never thought possible, not only it is educational but it also gives you possibility to explore on your own!',
                     pic: require('@/assets/img2.jpg'),
                     class: '  order-xs2 order-md1 order-lg1',
-                    text: 'order-xs1 order-md2 order-lg2'
+                    text: 'order-xs1 order-md2 order-lg2',
+                     link: '/explore',
                 },
             ]
         }

@@ -28,7 +28,11 @@ setLoading(state, payload) {
     },
     messages(state, payload) {
       state.submitedForm.push(payload)
-    }
+    },
+
+    removePost(state, payload) {
+      state.loadedBlogPosts.remove(payload)
+    },
 
 
 
@@ -128,6 +132,32 @@ setLoading(state, payload) {
 
     },
 
+    removePost({
+      commit
+    }, payload) {
+      const post = {
+        title: payload.title,
+        description: payload.description,
+        coverImg: payload.coverImg,
+        content: payload.content,
+        date: payload.date,
+
+
+      }
+      //reach out to firebase and store it
+      firebase.database().ref('posts').remove(post)
+        .then((data) => {
+          const key = data.key
+          commit('removePost', {
+            ...post,
+            id: key
+          })
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+
+    },
 
     messages({
       commit

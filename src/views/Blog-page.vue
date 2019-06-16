@@ -43,8 +43,8 @@ export default {
     },
 
     mounted() {
-    window.addEventListener('scroll', this.updateScroll);
-  }
+        window.addEventListener('scroll', this.updateScroll);
+    }
 
 }
 </script>
@@ -54,7 +54,6 @@ export default {
     display: none;
 
 }
-
 
 .show {
     animation-name: fadeInBtn;
