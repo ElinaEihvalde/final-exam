@@ -5,7 +5,7 @@
                 Back
             </v-btn>
             <v-spacer></v-spacer>
-              <v-btn  type="submit" @click="removePost" v-if="userIsAuthenticated" absolute right flat small class=" custom-btn">
+              <v-btn   @click="removePost" v-if="userIsAuthenticated" absolute right flat small class=" custom-btn">
                 <v-icon>delete_forever</v-icon>
                 Delete blog post
             </v-btn>
@@ -43,21 +43,8 @@ userIsAuthenticated () {
 
      methods: {
         removePost() {
-            this.$store.dispatch("removePost", postData)
-            console.log({
-                title: this.title,
-                description: this.description,
-                coverImg: this.coverImg,
-                date: this.date,
-                content: this.content
-            })
-            const postData = {
-                title: this.title,
-                description: this.description,
-                coverImg: this.coverImg,
-                content: this.html,
-                date: this.date
-            }
+            this.$store.dispatch("removePost")
+            
             
             this.$router.push("/blog")
 

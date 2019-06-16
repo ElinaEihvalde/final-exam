@@ -10,6 +10,7 @@ export default new Vuex.Store({
     loading: false,
 
     loadedBlogPosts: [],
+    post:[],
     submitedForm: []
   },
 
@@ -31,7 +32,7 @@ setLoading(state, payload) {
     },
 
     removePost(state, payload) {
-      state.loadedBlogPosts.remove(payload)
+      state.post.removeValue(payload)
     },
 
 
@@ -145,7 +146,7 @@ setLoading(state, payload) {
 
       }
       //reach out to firebase and store it
-      firebase.database().ref('posts').remove(post)
+      firebase.database().ref('posts').removeValue(post)
         .then((data) => {
           const key = data.key
           commit('removePost', {
