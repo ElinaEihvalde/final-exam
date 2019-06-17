@@ -5,10 +5,7 @@
                 Back
             </v-btn>
             <v-spacer></v-spacer>
-              <v-btn   @click="removePost" v-if="userIsAuthenticated" absolute right flat small class=" custom-btn">
-                <v-icon>delete_forever</v-icon>
-                Delete blog post
-            </v-btn>
+              
     <v-layout row fixed :class="{'column pt-3': $vuetify.breakpoint.smAndDown}">
      
         <v-flex xs4 :class="{'pt-3': $vuetify.breakpoint.smAndDown, 'offset-xs1': $vuetify.breakpoint.mdAndUp}" >
