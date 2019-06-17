@@ -10,7 +10,8 @@
             <p>Contact info:</p>
           </strong>
           <p>Phone:<a class="phone" href="tel: +37122082212"> + 371-22082212</a></p>
-          <p>E-mail: sklimanskis@gmail.com</p>
+          <p>E-mail:<a class="phone" href="mailto:sklimanskis@gmail.com"> sklimanskis@gmail.com</a></p>
+          <p><a class="phone" href="https://www.facebook.com/deepskyseeing.site/"> Facebook</a></p>
         </v-flex>
         <v-flex xs6 sm3 md3 lg2>
           <strong>
